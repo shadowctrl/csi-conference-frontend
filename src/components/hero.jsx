@@ -3,25 +3,10 @@ import styled from "styled-components";
 import "./hero.css";
 
 const Hero = () => {
-  const test = useRef(null);
-  const test1 = useRef(null);
-  const z = useRef(null);
-  const a = useRef(null);
-  const b = useRef(null);
-  const c = useRef(null);
-  const d = useRef(null);
-  const e = useRef(null);
-  const f = useRef(null);
-  const g = useRef(null);
-  const h = useRef(null);
-  const i = useRef(null);
-  const j = useRef(null);
-  const k = useRef(null);
-
   useEffect(() => {
     const options = {
       root: null,
-      threshold: 0.5,
+      threshold: 0.1,
       rootMargin: "0px",
     };
 
@@ -37,7 +22,8 @@ const Hero = () => {
     const observer = new IntersectionObserver(callback, options);
 
     const divs = document.querySelectorAll(
-      "div.test, div.test1, div.z, div.a, div.b, div.c, div.d, div.e, div.f, div.g,div.h, div.i, div.j, div.k"
+      `div.test,div.testh1, div.test1,div.test1h1, div.z, div.a, div.b, div.c, div.d, div.e, 
+      div.f, div.g,div.h, div.i, div.j, div.k      `
     );
 
     divs.forEach((div) => {
@@ -47,20 +33,29 @@ const Hero = () => {
 
   return (
     <Main className="mt-10 text-center">
-      <Title className="font-poppins text-center text-sky-600 text-xl font-extrabold">
+      <Title className="font-poppins text-center text-sky-600 text-sm md:text-xl font-extrabold">
         International Conference on Next-Gen Technologies in Computational
         Intelligence (NGTCA 2023)
-        <br /> <span className="text-3xl mt-5"> 24th - 26th March, 2023</span>
+        <br />{" "}
+        <div className="md:text-3xl md:mt-5 text-xl">
+          {" "}
+          24th - 26th March, 2023
+        </div>
       </Title>
 
-      <Content className="py-5">
-        <Border id="ac" />
-        <Div className=" ml-48 mr-48 font-poppins animate">
-          <div ref={test} className="test opacity-0">
-            <Head1 className="ml-32 mr-32 font-bold text-xl mt-10 text-sky-200 rounded-3xl bg-gray-gradient ">
+      <Content className="mb-6">
+        <Border
+          id="ac"
+          className=" border-double border-[4px] mt-[40px] md:ml-[128px] md:mr-[128px] 
+          ml-[32px] mr-[32px] border-sky-600  "
+        />
+        <Div className="md:ml-48 md:mr-48 ml-6 mr-6 font-poppins animate">
+          <div className="testh1 opacity-0">
+            <Head1 className="md:ml-32 md:mr-32 mr-8 ml-8 font-bold md:text-xl mt-10 text-sky-200 rounded-3xl bg-gray-gradient ">
               <h1 className="">About Conference </h1>
             </Head1>
-
+          </div>
+          <div className="test opacity-0">
             <Para1 className="antialiased text-justify mt-10">
               {" "}
               The conference focuses to share and exchange ideas in the field of
@@ -86,13 +81,19 @@ const Hero = () => {
           </div>
         </Div>
 
-        <Border id="ob" />
-        <Div className=" ml-48 mr-48 font-poppins animate">
-          <div ref={test1} className="test1 opacity-0">
-            <Head1 className="ml-32 mr-32 font-bold text-xl mt-10 text-sky-200 rounded-3xl bg-gray-gradient ">
+        <Border
+          id="ob"
+          className=" border-double border-[4px] mt-[40px] md:ml-[128px] md:mr-[128px] 
+          ml-[32px] mr-[32px] border-sky-600  "
+        />
+        <Div className=" md:ml-48 md:mr-48 ml-6 mr-6 font-poppins animate">
+          <div className="test1h1 opacity-0">
+            {" "}
+            <Head1 className="md:ml-32 md:mr-32 mr-8 ml-8 font-bold md:text-xl mt-10 text-sky-200 rounded-3xl bg-gray-gradient ">
               <h1 className="">Organising body </h1>
             </Head1>
-
+          </div>
+          <div className="test1 opacity-0">
             <Para1 className="antialiased text-justify mt-10">
               Computer Society of India (CSI) is the largest association of IT
               professionals in India. CSI is a non-profit organization
@@ -122,16 +123,20 @@ const Hero = () => {
           </div>
         </Div>
 
-        <Border id="cm" />
-        <Div className=" ml-48 mr-48 font-poppins">
-          <div ref={z} className="z opacity-0">
-            <Head1 className="ml-32 mr-32 font-bold text-xl mt-10 text-sky-200 rounded-3xl bg-gray-gradient ">
+        <Border
+          id="cm"
+          className=" border-double border-[4px] mt-[40px] md:ml-[128px] md:mr-[128px] 
+          ml-[32px] mr-[32px] border-sky-600  "
+        />
+        <Div className=" md:ml-48 md:mr-48 ml-6 mr-6 font-poppins animate">
+          <div className="z opacity-0">
+            <Head1 className="md:ml-32 md:mr-32 mr-8 ml-8 font-bold md:text-xl mt-10 text-sky-200 rounded-3xl bg-gray-gradient ">
               <h1 className="">Committee Members </h1>
             </Head1>
           </div>
 
           <Para1 className="antialiased text-justify mt-8">
-            <div ref={a} className="a opacity-0">
+            <div className="a opacity-0">
               <CommiteeTitle>Chief Patrons: </CommiteeTitle>
 
               <Ul className="">
@@ -150,7 +155,7 @@ const Hero = () => {
                 </li>
               </Ul>
             </div>
-            <div ref={b} className="b opacity-0">
+            <div className="b opacity-0">
               <CommiteeTitle>Program Chair(s) </CommiteeTitle>
 
               <Ul>
@@ -174,7 +179,7 @@ const Hero = () => {
                 </li>
               </Ul>
             </div>
-            <div ref={c} className="c opacity-0">
+            <div className="c opacity-0">
               <CommiteeTitle>Conference Convener(s) </CommiteeTitle>
 
               <Ul className="">
@@ -212,7 +217,7 @@ const Hero = () => {
               </Ul>
             </div>
 
-            <div ref={d} className="d opacity-0">
+            <div className="d opacity-0">
               <CommiteeTitle>Program Committee</CommiteeTitle>
 
               <Ul>
@@ -253,7 +258,7 @@ const Hero = () => {
                 </li>
               </Ul>
             </div>
-            <div ref={e} className="e opacity-0">
+            <div className="e opacity-0">
               <CommiteeTitle>
                 International Advisory Board Member(s){" "}
               </CommiteeTitle>
@@ -306,7 +311,7 @@ const Hero = () => {
                 <li> Vicente García Díaz, University of Oviedo, Spain</li>
               </Ul>
             </div>
-            <div ref={f} className="f opacity-0">
+            <div className="f opacity-0">
               <CommiteeTitle>
                 Technical Program Committee Member(s)
               </CommiteeTitle>
@@ -339,7 +344,7 @@ const Hero = () => {
                 <li>Mr. Robin Tommy, Innovation Head, TCS Trivandrum</li>
               </Ul>
             </div>
-            <div ref={g} className="g opacity-0">
+            <div className="g opacity-0">
               <CommiteeTitle>Organizing Committee Member(s)</CommiteeTitle>
               <Ul>
                 <li>
@@ -362,7 +367,7 @@ const Hero = () => {
                 <li>Ms. M. T. Sujatha, Chairperson, CSI Cochin Chapter</li>
               </Ul>
             </div>
-            <div ref={h} className="h opacity-0">
+            <div className="h opacity-0">
               <CommiteeTitle>Guest Speaker</CommiteeTitle>
 
               <Ul>
@@ -377,7 +382,7 @@ const Hero = () => {
                 </li>
               </Ul>
             </div>
-            <div ref={i} className="i opacity-0">
+            {/* <div className="i opacity-0">
               <CommiteeTitle>Venue</CommiteeTitle>
               <Ul>
                 <li>
@@ -389,7 +394,7 @@ const Hero = () => {
                 </li>
               </Ul>
             </div>
-            <div ref={j} className="j opacity-0">
+            <div className="j opacity-0">
               <CommiteeTitle id="il"> Important Links </CommiteeTitle>
               <ul className="ml-[30px] mt-[10px] list-disc">
                 <li>
@@ -421,56 +426,61 @@ const Hero = () => {
                   </a>
                 </li>
               </ul>
-              <h1 className="text-sky-900 font-bold mt-5">
+              <h1 className="text-sky-900 font-bold mt-5 animate-pulse">
                 Registration deadline: February 28, 2023
               </h1>
-              <h1 className="text-sky-900 font-bold ">
+              <h1 className="text-sky-900 font-bold animate-pulse ">
                 Submission deadline: February 28, 2023
               </h1>
-            </div>
-            <div ref={k} className="k opacity-0">
+            </div>*/}
+            <div className="k opacity-0">
               <CommiteeTitle>Author's Instructions </CommiteeTitle>
               <Ul>
-                <li>
+                <li className="a1">
                   Plagiarism should be less than 10%. [Keep the Plagiarism
                   Report along with manuscript [May be from TURNITIN].
                 </li>
-                <li>
+                <li className="a2">
                   Grammatical error must NOT be there. Language Clarity is very
                   much expected, and final manuscript is channeled by a language
                   expert. Any sort of kind of dispute may lead to direct
                   rejection by the Springer
                 </li>
-                <li>
+                <li className="a3">
                   NO Figure and NO Table should be copied from any other paper /
                   Internet. This activity may lead to direct rejection.Quality
                   of the figures should be high resolution.
                 </li>
-                <li>
+                <li className="a4">
                   Page Limit: Minimum 6 Pages and Maximum 7 Pages after
                   compliance with the specified Format.
                 </li>
-                <li>
+                <li className="a5">
                   Each Paper must contain Abstract (150-200 words) and Keywords
                   (4-5).
                 </li>
-                <li>
+                <li className="a6">
                   All Table No. and Figure No. should be mentioned inside the
                   manuscript
                 </li>
-                <li>
+                <li className="a7">
                   All Reference Number / Citation must be properly cited inside
                   the manuscript.
                 </li>
-                <li>
+                <li className="a8">
                   Make sure that all the references are cited in the body of the
                   paper.
                 </li>
-                <li> Maintain good quality figure.</li>
+                <li className="a9"> Maintain good quality figure.</li>
               </Ul>
             </div>
           </Para1>
         </Div>
+        <Border
+          id="cm"
+          className=" border-double border-[4px] mt-[40px] md:ml-[128px] md:mr-[128px] 
+          ml-[32px] mr-[32px] border-sky-600  "
+        />
       </Content>
     </Main>
   );
@@ -481,12 +491,12 @@ export default Hero;
 const Main = styled.div``;
 const Title = styled.div``;
 const Border = styled.div`
-  border-style: double;
-  border-width: 4px;
-  margin-top: 40px;
-  margin-left: 128px;
-  margin-right: 128px;
-  border-color: rgb(2, 132, 199);
+  // border-style: double;
+  // border-width: 4px;
+  // margin-top: 40px;
+  // margin-left: 128px;
+  // margin-right: 128px;
+  // border-color: rgb(2, 132, 199);
 `;
 
 const Head1 = styled.div``;
