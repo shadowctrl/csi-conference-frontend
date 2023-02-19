@@ -1,6 +1,7 @@
 import { React, useEffect, useRef } from "react";
 import styled from "styled-components";
 import "./hero.css";
+import Aboutus from "./aboutus";
 
 const Hero = () => {
   useEffect(() => {

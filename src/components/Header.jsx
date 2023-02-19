@@ -4,7 +4,7 @@ import React from "react";
 import { AiFillHome } from "react-icons/ai";
 import { MdGroups } from "react-icons/md";
 // import { IoLinkSharp } from 'react-icons/iolink'
-import { RiLinksFill, RiCloseCircleFill } from "react-icons/ri";
+import {  RiCloseCircleFill } from "react-icons/ri";
 // import { IoBody } from 'react-icons/io'
 import { BiBody } from "react-icons/bi";
 import { MdOutlineGroupAdd } from "react-icons/md";
@@ -17,6 +17,7 @@ import { GrClose } from "react-icons/gr";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 
+import { FcAbout } from "react-icons/fc"
 // import { GrClose } from 'react-icons/gr'
 
 // import Popup from './components/Popup';
@@ -66,8 +67,13 @@ const Header = () => {
           <MdOutlineGroupAdd size={30} />
           <a href="#cm">Committee members</a>
         </li>
-
+        {/* <li>
+          
+          <RiLinksFill size={27} />
+          <a href="#il">Important links</a>
+        </li> */}
         <li>
+          <FcAbout size={25} />
           <a href="#au">About Us</a>
         </li>
       </BottomNav>
@@ -78,35 +84,61 @@ const Header = () => {
         {/* <button onClick={ () => setBurgerStatus(true)}>
           <GiHamburgerMenu size={25} />
         </button> */}
-        <BurgerNav
-          show={burgerStatus}
-          className="rounded-xl bg-gray-gradient sidebar"
-        >
+        <BurgerNav show={burgerStatus} className='rounded-xl bg-gray-gradient'>
           <CloseBgNav onClick={() => setBurgerStatus(false)}>
-            <RiCloseCircleFill size={25} />
+            <RiCloseCircleFill size={30} />
           </CloseBgNav>
           <li>
-            <AiFillHome size={25} />
-            <a href="#">
-              <button onClick={() => setButtonPopup(true)}>Home</button>
-            </a>
+            <MenuWrap>
+              <AiFillHome size={25} />
+              <a href="#">
+                <button onClick={() => setButtonPopup(true)}>Home</button>
+              </a>
+            </MenuWrap>
           </li>
           <li>
-            <MdGroups size={30} />
-            <a href="#ac">About Conference</a>
+            <MenuWrap>
+              <MdGroups size={30} />
+              <a href="#ac"> 
+              <button onClick={() => setBurgerStatus(false)}>About Conference</button> 
+              </a>
+            </MenuWrap>
+
           </li>
           <li>
-            <BiBody size={25} />
-            <a href="#ob">Organising body</a>
+            <MenuWrap>
+              <BiBody size={25} />
+              <a href="#ob">
+                <button onClick={() => setBurgerStatus(false)}>Organising body</button>
+                </a>
+            </MenuWrap>
+
           </li>
           <li>
-            <MdOutlineGroupAdd size={30} />
-            <a href="#cm">Committee members</a>
+            <MenuWrap>
+              <MdOutlineGroupAdd size={30} />
+              <a href="#cm">
+                <button onClick={() => setBurgerStatus(false)}>Committee members</button>
+                </a>
+            </MenuWrap>
+
           </li>
-          <li>
-            {/* <IoLinkSharp size={30}/> */}
+          {/* <li>
+            <MenuWrap>
             <RiLinksFill size={27} />
-            <a href="#il">Important links</a>
+              <a href="#il">
+                <button onClick={() => setBurgerStatus(false)}>Important links</button>
+                </a>
+            </MenuWrap>
+            
+
+          </li> */}
+          <li>
+            <MenuWrap>
+              <FcAbout size={25} />
+              <a href="#au">About Us</a>
+            </MenuWrap>
+
           </li>
         </BurgerNav>
       </BottomNavPh>
@@ -125,15 +157,19 @@ export default Header;
 
 const HeaderC = styled.div`
   width: 100vw;
-  height: 30vh;
+  height: 32vh;
   margin-top: 0;
   padding-top: 0;
   display: flex;
   flex-direction: column;
   font-family: poppins;
-  @media (max-width: 768px) {
+  @media (max-width: 1060px) {
     height: 17vh;
   }
+
+  /* @media(max-width: 1060px){
+    height: 25vh;
+  } */
   /* position: absolute; */
 
   /* z-index: ; */
@@ -144,9 +180,11 @@ const TopNav = styled.div`
   display: flex;
   align-items: center;
   padding-left: 200px;
+  /* width: 70%; */
+  /* background-color: black; */
   /* height: 80%; */
 
-  @media (max-width: 768px) {
+  @media (max-width: 1060px) {
     padding: 0;
     margin: 0;
     height: 78%;
@@ -158,7 +196,7 @@ const Logo = styled.div`
   width: 150px;
   height: 150px;
   margin: 10px 20px;
-  @media (max-width: 768px) {
+  @media (max-width: 1060px) {
     margin: 0;
     padding: 0;
     margin-left: 20px;
@@ -175,7 +213,7 @@ const Heading = styled.div`
   /* margin-top: 40px; */
   h1 {
     /* color:rgb(56, 189, 248);
-                @media(max-width: 768px){ */
+                @media(max-width: 1060px){ */
     /* color: #f5f5f5; */
     font-weight: 800;
     font-size: 35px;
@@ -185,7 +223,7 @@ const Heading = styled.div`
     font-size: 22px;
     font-weight: 600;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1060px) {
     padding: 0;
     margin: 0;
     margin-left: 15px;
@@ -200,6 +238,7 @@ const Heading = styled.div`
 
 const BottomNav = styled.div`
   display: flex;
+  /* width: 20%; */
   /* height: 22%; */
   position: relative;
   /* justify-content: space-between; */
@@ -207,6 +246,7 @@ const BottomNav = styled.div`
   /* padding-left: 420px; */
   padding-left: 250px;
   padding-top: 20px;
+  padding-bottom: 20px;
 
   li {
     margin-right: 80px;
@@ -214,7 +254,7 @@ const BottomNav = styled.div`
     list-style-type: none;
     display: flex;
     align-items: center;
-    /* @media(max-width: 768px){
+    /* @media(max-width: 1060px){
           display: none;
         } */
     &:hover {
@@ -233,12 +273,12 @@ const BottomNav = styled.div`
     font-weight: 700;
     font-size: 20px;
 
-    /* @media(max-width: 768px){
+    /* @media(max-width: 1060px){
           display: none;
         } */
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1060px) {
     display: none;
     padding: 0px;
     height: 0%;
@@ -247,11 +287,11 @@ const BottomNav = styled.div`
 `;
 
 const Button = styled.button`
-  @media (min-width: 768px) {
+  @media (min-width: 1060px) {
     display: none;
   }
   z-index: 1;
-  padding: 0px;
+  padding: 0 10px;
   margin: 0px;
   position: absolute;
   right: 5px;
@@ -264,13 +304,15 @@ const Button = styled.button`
 `;
 
 const CloseBgNav = styled.button`
-  margin-left: 180px;
+  margin-left: 5px;
+  margin-bottom: 30px;
   z-index: 1;
-  margin-top: 5px;
+  margin-top: 10px;
+  /* margin-right:30px; */
   cursor: pointer;
 `;
 const BottomNavPh = styled.div`
-  @media (min-width: 768px) {
+  @media (min-width: 1060px) {
     display: none;
   }
   position: relative;
@@ -283,7 +325,7 @@ const BottomNavPh = styled.div`
   li {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     margin-left: 7px;
   }
   z-index: 1;
@@ -292,14 +334,28 @@ const BottomNavPh = styled.div`
 `;
 const BurgerNav = styled.div`
   /* display: none; */
-  // margin-top: 28%;
-  width: 50vw;
+  width: 62vw;
   height: 90vh;
   position: fixed;
   top: 0;
   right: 0;
-  color: white;
   background-color: #f5f5f5;
   transform: ${(props) => (props.show ? "translate(0)" : "translate(100%)")};
   transition: transform 0.5s;
+  color: #f5f5f5;
+  li{
+    border-bottom: 2px solid rgba(0, 0, 0, .5);
+    /* padding-bottom: 5px; */
+  }
+
+  a{
+    /* margin-bottom: 30px; */
+  }
+`;
+
+const MenuWrap = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
 `;
