@@ -20,6 +20,7 @@ import { GiHamburgerMenu, GiPublicSpeaker } from "react-icons/gi";
 
 import { FcAbout } from "react-icons/fc";
 
+import { Outlet } from "react-router-dom";
 // GiPublicSpeaker
 // import { GrClose } from 'react-icons/gr'
 
@@ -32,6 +33,7 @@ const Header = () => {
   const [burgerStatus, setBurgerStatus] = useState(false);
 
   return (
+    <div>
     <HeaderC className="bg-slate-700 py-7 md:py-0">
       <TopNav className="">
         <Logo className="">
@@ -173,7 +175,11 @@ const Header = () => {
         {/* <img src='/images/csi-broch2' /> */}
       </Popup>
     </HeaderC>
-    // {burgerStatus,setBurgerStatus,}
+                                            {/* ############################ */}
+    <Main>
+      <Outlet />
+    </Main>
+    </div>
   );
 };
 
@@ -198,6 +204,8 @@ const HeaderC = styled.div`
 
   // /* z-index: ; */
 `;
+
+const Main = styled.div``;
 
 const TopNav = styled.div`
   padding-top: 20px;
