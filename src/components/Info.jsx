@@ -15,6 +15,8 @@ export default Info;
 
 const InfoC = styled.div`
   display: flex;
+  /* position: relative;
+  bottom: 0; */
   /* flex-direction: column; */
   align-items: center;
   justify-content: center;

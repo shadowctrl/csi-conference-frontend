@@ -1,18 +1,36 @@
 import "./App.css";
-import Header from "./components/Header";
+/*              COMPONENTS              */
+// import Header from "./components/Header";
 import Hero from "./components/hero";
-import Info from "./components/Info";
-import Aboutus from "./components/aboutus";
+import ChiefGuest from "./components/chiefGuest"
+// import chief from "./components/chief";
+// import Info from "./components/Info";
+// import Aboutus from "./components/aboutus";
+// import chiefGuest from "./components/chiefGuest";
 
-import { createRoutesFromElements, createBrowserRouter, Route, RouteProvider, NavLink } from "react-router-dom";
+/*               LAYOUTS               */
+import RootLayout from "./Layouts/RootLayout";
+
+
+import { createRoutesFromElements, createBrowserRouter, Route, RouterProvider, NavLink } from "react-router-dom";
 // import Popups from './components/Popups';
 // const router = cre
+const router = createBrowserRouter (
+               createRoutesFromElements(
 
+                <Route path='/' element={<RootLayout/>}>
+
+                    <Route index element={<Hero/>} />
+                    <Route path='chiefGuest' element={<ChiefGuest/>} />
+                </Route>
+
+               )
+              )
 
 function App() {
   return (
     <div className="">
-      <div>
+      {/* <div>
         {" "}
         <Header />
       </div>
@@ -20,13 +38,12 @@ function App() {
         {" "}
         <Hero />
       </div>
-      <div>
-        <Aboutus />
-      </div>
+    
       <div>
         {" "}
         <Info />{" "}
-      </div>
+      </div> */}
+      <RouterProvider router={router}/>
     </div>
   );
 }

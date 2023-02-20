@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Info from "./Info";
 // import HomeIcon from '@mui/icons-material/Home';
 import React from "react";
 import { AiFillHome } from "react-icons/ai";
@@ -28,16 +29,16 @@ import { Outlet } from "react-router-dom";
 
 const Header = () => {
   // const [modalShow, setModalShow] = React.useState(false);
-  const [buttonPopup, setButtonPopup] = useState(true);
+  const [buttonPopup, setButtonPopup] = useState(false);
 
   const [burgerStatus, setBurgerStatus] = useState(false);
 
   return (
-    <div>
+    
     <HeaderC className="bg-slate-700 py-7 md:py-0">
       <TopNav className="">
         <Logo className="">
-          <a href="#">
+          <a href="/">
             <img src="/images/csilogo.png" />
           </a>
         </Logo>
@@ -63,15 +64,15 @@ const Header = () => {
         </li>
         <li>
           <MdGroups size={30} />
-          <a href="#ac">About Conference</a>
+          <a href="/#ac">About Conference</a>
         </li>
         <li>
           <BiBody size={25} />
-          <a href="#ob">Organising body</a>
+          <a href="/#ob">Organising body</a>
         </li>
         <li>
           <MdOutlineGroupAdd size={30} />
-          <a href="#cm">Committee members</a>
+          <a href="/#cm">Committee members</a>
         </li>
         {/* <li>
           
@@ -81,18 +82,18 @@ const Header = () => {
 
         <li>
           <GiPublicSpeaker size={25} />
-          <a href="/chiefguest">Cheif guest</a>
+          <a href="/chiefGuest"><button onClick={ () => setButtonPopup(false)}>Cheif guest</button></a>
         </li>
 
         <li>
           {/* <FcAbout size={25} /> */}
           <CgNotes size={25} />
-          <a href="#r">Registrations</a>
+          <a href="/#r">Registrations</a>
         </li>
 
         <li>
           <FcAbout size={25} />
-          <a href="#au">About Us</a>
+          <a href="/#au">About Us</a>
         </li>
       </BottomNav>
       <BottomNavPh>
@@ -120,7 +121,7 @@ const Header = () => {
           <li>
             <MenuWrap>
               <MdGroups size={30} />
-              <a href="#ac">
+              <a href="/#ac">
                 <button onClick={() => setBurgerStatus(false)}>
                   About Conference
                 </button>
@@ -130,7 +131,7 @@ const Header = () => {
           <li>
             <MenuWrap>
               <BiBody size={25} />
-              <a href="#ob">
+              <a href="/#ob">
                 <button onClick={() => setBurgerStatus(false)}>
                   Organising body
                 </button>
@@ -140,7 +141,7 @@ const Header = () => {
           <li>
             <MenuWrap>
               <MdOutlineGroupAdd size={30} />
-              <a href="#cm">
+              <a href="/#cm">
                 <button onClick={() => setBurgerStatus(false)}>
                   Committee members
                 </button>
@@ -157,10 +158,28 @@ const Header = () => {
             
 
           </li> */}
+            <li>
+            <MenuWrap>
+            <GiPublicSpeaker size={25} />
+              <a href="/chiefGuest">
+                <button onClick={() => setBurgerStatus(false)}>Chief Guest</button>
+              </a>
+            </MenuWrap>
+          </li>
+          <li>
+            <MenuWrap>
+            <CgNotes size={25} />
+              <a href="/#r">
+                <button onClick={() => setBurgerStatus(false)}>
+                Registrations
+                </button>
+              </a>
+            </MenuWrap>
+          </li>
           <li>
             <MenuWrap>
               <FcAbout size={25} />
-              <a href="#au">
+              <a href="/#au">
                 <button onClick={() => setBurgerStatus(false)}>About Us</button>
               </a>
             </MenuWrap>
@@ -175,11 +194,9 @@ const Header = () => {
         {/* <img src='/images/csi-broch2' /> */}
       </Popup>
     </HeaderC>
-                                            {/* ############################ */}
-    <Main>
-      <Outlet />
-    </Main>
-    </div>
+                                           
+    
+    
   );
 };
 
@@ -203,6 +220,9 @@ const HeaderC = styled.div`
   // /* position: absolute; */
 
   // /* z-index: ; */
+  /* @media(min-width: 769px){
+  height: 33vh;
+  } */
 `;
 
 const Main = styled.div``;
