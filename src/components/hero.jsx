@@ -139,23 +139,7 @@ const Hero = () => {
           </div>
 
           <Para1 className="antialiased text-justify mt-8">
-            <div className="cc">
-              <CommiteeTitle>Conference Chairs </CommiteeTitle>
-              <Ul>
-                <li className="">
-                  <span className=" text-orange-500"> Dr. M. MURUGAN</span>,
-                  Principal, SRM Valliammai Engineering College and Chairman,
-                  CSI Kancheepuram Chapter.
-                </li>
-                <li className="">
-                  {" "}
-                  <span className=" text-orange-500">Dr.E.INIYA NEHRU</span>,
-                  Deputy Director General, National Informatics centre Chennai
-                  and past Chair of CSI Chennai Chapter{" "}
-                </li>
-              </Ul>
-            </div>
-            <div className="a opacity-0">
+          <div className="a opacity-0">
               <CommiteeTitle>Chief Patrons: </CommiteeTitle>
 
               <Ul className="">
@@ -174,6 +158,23 @@ const Hero = () => {
                 </li>
               </Ul>
             </div>
+            <div className="cc">
+              <CommiteeTitle>Conference Chair(s) </CommiteeTitle>
+              <Ul>
+                <li className="">
+                  <span className=" text-orange-500"> Dr. M. MURUGAN</span>,
+                  Principal, SRM Valliammai Engineering College and Chairman,
+                  CSI Kancheepuram Chapter.
+                </li>
+                <li className="">
+                  {" "}
+                  <span className=" text-orange-500">Dr.E.INIYA NEHRU</span>,
+                  Deputy Director General, National Informatics centre Chennai
+                  and past Chair of CSI Chennai Chapter{" "}
+                </li>
+              </Ul>
+            </div>
+            
             <div className="c opacity-0">
               <CommiteeTitle className="">
                 Conference Convener(s){" "}
@@ -405,11 +406,11 @@ const Hero = () => {
               <CommiteeTitle>Guest Speaker</CommiteeTitle>
 
               <Ul>
-                <li>
+                {/* <li>
                   {" "}
                   Chief Guest: Dr. Mylswamy Annadurai, Former Director, ISRO
                   Satelite Centre & Chandrayan Project.
-                </li>
+                </li> */}
                 <li>
                   Mr. Dhakshinamoorthy R, Principal Enterprise Architect, IoT BU,
                   TCS
