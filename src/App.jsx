@@ -6,7 +6,7 @@ import Aboutus from "./components/aboutus";
 
 import { createRoutesFromElements, createBrowserRouter, Route, RouteProvider, NavLink } from "react-router-dom";
 // import Popups from './components/Popups';
-const router = cre
+// const router = cre
 
 
 function App() {
