@@ -246,15 +246,17 @@ const BottomNav = styled.div`
   /* width: 20%; */
   /* height: 22%; */
   position: relative;
-  /* justify-content: space-between; */
+  justify-content: center;
   /* padding: 5px 0; */
   /* padding-left: 420px; */
-  padding-left: 200px;
+  /* margin-left: 100px; */
+  padding-left: 70px;
+  padding-right: 70px;
   padding-top: 20px;
   padding-bottom: 20px;
 
   li {
-    margin-right: 80px;
+    margin: 0 auto;
     text-decoration: none;
     list-style-type: none;
     display: flex;
@@ -270,6 +272,7 @@ const BottomNav = styled.div`
   }
 
   a {
+    display: flex;
     text-decoration: none;
     margin-left: 5px;
     margin-top: 5px;
