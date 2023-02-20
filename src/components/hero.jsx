@@ -2,6 +2,8 @@ import { React, useEffect, useRef } from "react";
 import styled from "styled-components";
 import "./hero.css";
 import Aboutus from "./aboutus";
+import { FaRupeeSign } from "react-icons/fa";
+import { FaDollarSign } from "react-icons/fa";
 
 const Hero = () => {
   useEffect(() => {
@@ -24,7 +26,7 @@ const Hero = () => {
 
     const divs = document.querySelectorAll(
       `div.test,div.testh1, div.test1,div.test1h1, div.z, div.a, div.b, div.c, div.d, div.e, 
-      div.f, div.g,div.h, div.i, div.j, div.k      `
+      div.f, div.g,div.h, div.i, div.j, div.k, div.cc,div.fee, div.payment      `
     );
 
     divs.forEach((div) => {
@@ -137,6 +139,22 @@ const Hero = () => {
           </div>
 
           <Para1 className="antialiased text-justify mt-8">
+            <div className="cc">
+              <CommiteeTitle>Conference Chairs </CommiteeTitle>
+              <Ul>
+                <li className="">
+                  <span className=" text-orange-500"> Dr. M. MURUGAN</span>,
+                  Principal, SRM Valliammai Engineering College and Chairman,
+                  CSI Kancheepuram Chapter.
+                </li>
+                <li className="">
+                  {" "}
+                  <span className=" text-orange-500">Dr.E.INIYA NEHRU</span>,
+                  Deputy Director General, National Informatics centre Chennai
+                  and past Chair of CSI Chennai Chapter{" "}
+                </li>
+              </Ul>
+            </div>
             <div className="a opacity-0">
               <CommiteeTitle>Chief Patrons: </CommiteeTitle>
 
@@ -156,64 +174,44 @@ const Hero = () => {
                 </li>
               </Ul>
             </div>
-            <div className="b opacity-0">
-              <CommiteeTitle>Program Chair(s) </CommiteeTitle>
-
-              <Ul>
-                <li>Mr. R. Selvaraj, Past Chair Person, CSI Trichy Chapter </li>
-                <li>
-                  Dr. B. Latha, HoD, CSE Sri Sairam Engineering College and MC
-                  Member, CSI Kancheepuram Chapter{" "}
-                </li>
-                <li>
-                  Dr. E Chandra Blessie, Coimbatore Institute of Technology,
-                  Coimbatore ( CSI Coimbatore chapter ){" "}
-                </li>
-                <li>
-                  Dr. R Parameswari, Professor, Department of Computer Science,
-                  Vels Institute of Science, Technology and Advanced Studies,
-                  Chennai and MC member of CSI Chennai Chapter{" "}
-                </li>
-                <li>
-                  Dr. Malu, Kerala University of Digital Sciences, Innovation
-                  and Technology and Joint Secretary, CSI Trivandrum Chapter{" "}
-                </li>
-              </Ul>
-            </div>
             <div className="c opacity-0">
-              <CommiteeTitle>Conference Convener(s) </CommiteeTitle>
-
+              <CommiteeTitle className="">
+                Conference Convener(s){" "}
+              </CommiteeTitle>
               <Ul className="">
                 <li>
-                  Mr. P. V. Subramanian, Past Chairperson, CSI Chennai Chapter{" "}
+                  <span>Committe Head:</span> Mr. P. V. Subramanian, Past
+                  Chairperson, CSI Chennai Chapter{" "}
                 </li>
                 <li>
                   {" "}
-                  Dr. M. Senthil Kumar, Associate Professor & Head, Cyber
-                  Security, SRM Valliammai Engineering College, Chennai and past
-                  Secretary, CSI Kancheepuram Chapter{" "}
+                  <span>Secretary:</span>
+                  Dr. M. Senthil Kumar, Professor & Head, Cyber Security, SRM
+                  Valliammai Engineering College, Chennai and past Secretary,
+                  CSI <h1 className="ml-[24px]">Kancheepuram Chapter </h1>
                 </li>
                 <li>
-                  {" "}
+                  <span>Treasurer:</span>
                   Dr. A. Prema Kirubakaran, Professor, Vels Institute of
                   Science, Technology and Advanced Studies, Chennai and past
-                  Secretary, CSI Chennai Chapter{" "}
+                  Secretary, <h1 className="ml-[24px]"> CSI Chennai Chapter</h1>
                 </li>
-                <li> Mr. Rajesh P, MC Member, CSI Trivandrum Chapter </li>
                 <li>
-                  {" "}
-                  Dr. S. K. Saravanan, Assistant Professor, SRM Valliammai
-                  Engineering College and Secretary and CSI Kancheepuram Chapter{" "}
-                </li>
-                <li> Mr. R. Senthil Kumar, Secretary, CSI Trichy Chapter </li>
-                <li>
-                  {" "}
-                  Mr. R. Saravana Kumar, Treasurer, CSI Coimbatore Chapter{" "}
+                  <span>Joint Secretary:</span>Dr. BIJI C.L.., Associate
+                  Professor, vellore Institute of Technology, CSI Trivandrum
+                  Chapter{" "}
                 </li>
                 <li>
                   {" "}
-                  Ms. G. Priyanka, Assistant Professor, Mepco Schlenk
-                  Engineering College, Secretary and CSI Sivakasi Chapter{" "}
+                  <span>Joint Treasurer:</span>Ms. G. PRIYANKA, Assistant
+                  Professor, Mepco Schlenk Engineering College, CSI Sivakasi
+                  CHapter
+                </li>
+                <li>
+                  {" "}
+                  <span>Editorial Head:</span> Dr. R. ANANDAN, Professor and
+                  HoD, Vels Institute of Science, Technology and Advanced
+                  Studies
                 </li>
               </Ul>
             </div>
@@ -222,6 +220,11 @@ const Hero = () => {
               <CommiteeTitle>Program Committee</CommiteeTitle>
 
               <Ul>
+                <li>
+                  {" "}
+                  Dr. S. K. Saravanan, Assistant Professor, SRM Valliammai
+                  Engineering College and Secretary and CSI Kancheepuram Chapter{" "}
+                </li>
                 <li>
                   Dr. D Kavitha, Associate Professor, St. Peter’s Institute of
                   Higher Education and Research (SPIHER) and MC member of CSI
@@ -256,6 +259,37 @@ const Hero = () => {
                   Dr B.G. Geetha , Professor & Director , Department Of Computer
                   Science And Engineering , K.S. Rangasamy College Of Technology
                   Tiruchengode
+                </li>
+                <li> Mr. Rajesh P, MC Member, CSI Trivandrum Chapter </li>
+
+                <li> Mr. R. Senthil Kumar, Secretary, CSI Trichy Chapter </li>
+                <li>
+                  {" "}
+                  Mr. R. Saravana Kumar, Treasurer, CSI Coimbatore Chapter{" "}
+                </li>
+              </Ul>
+            </div>
+            <div className="b opacity-0">
+              <CommiteeTitle>Program Chair(s) </CommiteeTitle>
+
+              <Ul>
+                <li>Mr. R. Selvaraj, Past Chair Person, CSI Trichy Chapter </li>
+                <li>
+                  Dr. B. Latha, HoD, CSE Sri Sairam Engineering College and MC
+                  Member, CSI Kancheepuram Chapter{" "}
+                </li>
+                <li>
+                  Dr. E Chandra Blessie, Coimbatore Institute of Technology,
+                  Coimbatore ( CSI Coimbatore chapter ){" "}
+                </li>
+                <li>
+                  Dr. R Parameswari, Professor, Department of Computer Science,
+                  Vels Institute of Science, Technology and Advanced Studies,
+                  Chennai and MC member of CSI Chennai Chapter{" "}
+                </li>
+                <li>
+                  Dr. Malu, Kerala University of Digital Sciences, Innovation
+                  and Technology and Joint Secretary, CSI Trivandrum Chapter{" "}
                 </li>
               </Ul>
             </div>
@@ -352,7 +386,6 @@ const Hero = () => {
                   {" "}
                   Mr. T. V. Kamalak Kannan, Chairperson, CSI Chennai Chapter
                 </li>
-                <li>Dr. M. Murugan, Chairperson, CSI Kancheepuram Chapter</li>
                 <li>
                   Dr. Elizabeth Sherly, Chairperson, CSI Trivandrum Chapter
                 </li>
@@ -478,7 +511,82 @@ const Hero = () => {
           </Para1>
         </Div>
         <Border
-          id="cm"
+          id="r"
+          className=" border-double border-[4px] mt-[40px] md:ml-[128px] md:mr-[128px] 
+          ml-[32px] mr-[32px] border-sky-600  "
+        />
+
+        <Div className=" md:ml-48 md:mr-48 ml-6 mr-6 font-poppins animate">
+          <div className="fee">
+            <Head1 className="md:ml-32 md:mr-32 mr-8 ml-8 font-bold md:text-xl mt-10 text-sky-200 rounded-3xl bg-gray-gradient ">
+              <h1 className="md:text-3xl text-lg font-extrabold">
+                Registrations And Payments
+              </h1>
+            </Head1>
+            <div className="p-5 gap-y-5 font-[500] text-sm md:text-lg grid grid-cols-2 grid-flow-row font-poppins mt-10 bg-gray-200 rounded-2xl">
+              <div className="font-extrabold text-sky-900 text-[16px]">
+                Type Of Registration
+              </div>
+              <div className="font-extrabold text-sky-900 text-[16px]">
+                Registration Fee
+              </div>
+              <div className="">
+                Publication with Taylor & Francis Conference Proceedings <br />
+                <span className="text-red-600">( SCOPUS INDEXED) </span>
+              </div>
+              <div className="flex mt-[10px]">
+                <FaRupeeSign size={20} className="md:ml-[230px]" /> 9500 Rs/-
+              </div>
+
+              <div> Publication with InderScience/Universal Wiser</div>
+              <div className="flex mt-[10x]">
+                {" "}
+                <FaRupeeSign size={20} className="md:ml-[230px]" /> 1500 Rs/-
+              </div>
+              <div>
+                <span className="text-red-600">(Only Participants) </span>
+                <br /> <span>Listener</span>
+                <span> Per Day</span>
+              </div>
+              <div className="flex mt-[10px]">
+                <FaRupeeSign size={20} className="md:ml-[230px]" /> 500 Rs/-
+              </div>
+              <div>
+                {" "}
+                <span className=" text-red-600"> (SCOPUS INDEXED)</span> Foreign
+                Authors
+              </div>
+              <div className="flex mt-3">
+                <FaDollarSign size={20} className="md:ml-[230px]" /> 120 USD/-
+              </div>
+            </div>
+          </div>
+          <Payment className="payment">
+            <CommiteeTitle className="">
+              <h1 className="md:text-3xl text-[1.5rem]"> Payment Details </h1>
+            </CommiteeTitle>
+            <ul className="list-none md:mt-[20px] mt-[10px] md:text-lg text-md">
+              <li>
+                Bank Account Number:-<span>33934168390 </span>
+              </li>
+
+              <li>
+                IFCC Code:- <span> SBIN0007074</span>
+              </li>
+
+              <li>
+                Bank:- <span>STATE BANK OF INDIA</span>
+              </li>
+
+              <li>
+                Branch:- <span>MIDC ANDHERI EAST</span>
+              </li>
+            </ul>
+          </Payment>
+        </Div>
+
+        <Border
+          // id="r"
           className=" border-double border-[4px] mt-[40px] md:ml-[128px] md:mr-[128px] 
           ml-[32px] mr-[32px] border-sky-600  "
         />
@@ -508,6 +616,11 @@ const Ul = styled.div`
   margin-left: 30px;
   margin-top: 10px;
   font-weight: 400;
+  span {
+    color: rgb(234 88 12);
+    font-weight: 600;
+    margin-right: 5px;
+  }
 `;
 
 const CommiteeTitle = styled.div`
@@ -515,4 +628,20 @@ const CommiteeTitle = styled.div`
   color: rgb(12, 74, 110);
   font-size: 1.125rem;
   font-weight: 700;
+`;
+
+const Payment = styled.div`
+  margin-top: 40px;
+  font-family: poppins;
+  li {
+    font-weight: 500;
+    color: red;
+    text-align: left;
+    font-size: larger;
+  }
+
+  span {
+    color: black;
+    margin-left: 4px;
+  }
 `;

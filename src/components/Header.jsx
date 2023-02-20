@@ -5,6 +5,7 @@ import { AiFillHome } from "react-icons/ai";
 import { MdGroups } from "react-icons/md";
 // import { IoLinkSharp } from 'react-icons/iolink'
 import { RiCloseCircleFill } from "react-icons/ri";
+import { CgNotes } from "react-icons/cg";
 // import { IoBody } from 'react-icons/io'
 import { BiBody } from "react-icons/bi";
 import { MdOutlineGroupAdd } from "react-icons/md";
@@ -27,9 +28,10 @@ const Header = () => {
   const [buttonPopup, setButtonPopup] = useState(true);
 
   const [burgerStatus, setBurgerStatus] = useState(false);
+
   return (
     <HeaderC className="bg-slate-700 py-7 md:py-0">
-      <TopNav>
+      <TopNav className="">
         <Logo className="">
           <a href="#">
             <img src="/images/csilogo.png" />
@@ -72,6 +74,18 @@ const Header = () => {
           <RiLinksFill size={27} />
           <a href="#il">Important links</a>
         </li> */}
+
+        <li>
+          {/* <FcAbout size={25} /> */}
+          <a href="/chiefguest">Cheif guest</a>
+        </li>
+
+        <li>
+          {/* <FcAbout size={25} /> */}
+          <CgNotes size={25} />
+          <a href="#r">Registrations</a>
+        </li>
+
         <li>
           <FcAbout size={25} />
           <a href="#au">About Us</a>
@@ -142,7 +156,9 @@ const Header = () => {
           <li>
             <MenuWrap>
               <FcAbout size={25} />
-              <a href="#au">About Us</a>
+              <a href="#au">
+                <button onClick={() => setBurgerStatus(false)}>About Us</button>
+              </a>
             </MenuWrap>
           </li>
         </BurgerNav>
@@ -155,6 +171,7 @@ const Header = () => {
         {/* <img src='/images/csi-broch2' /> */}
       </Popup>
     </HeaderC>
+    // {burgerStatus,setBurgerStatus,}
   );
 };
 
@@ -184,7 +201,7 @@ const TopNav = styled.div`
   padding-top: 20px;
   display: flex;
   align-items: center;
-  padding-left: 200px;
+  padding-left: 450px;
   /* width: 70%; */
   /* background-color: black; */
   /* height: 80%; */
@@ -198,8 +215,8 @@ const TopNav = styled.div`
 `;
 
 const Logo = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 110px;
+  height: 110px;
   margin: 10px 20px;
   @media (max-width: 1060px) {
     margin: 0;
@@ -250,10 +267,10 @@ const BottomNav = styled.div`
   /* padding: 5px 0; */
   /* padding-left: 420px; */
   /* margin-left: 100px; */
-  padding-left: 70px;
-  padding-right: 70px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   li {
     margin: 0 auto;
@@ -279,7 +296,7 @@ const BottomNav = styled.div`
     /* color: rgb(192,192,192); */
     color: rgba(189, 230, 253, 1);
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
 
     /* @media(max-width: 1060px){
           display: none;
