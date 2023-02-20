@@ -411,7 +411,7 @@ const Hero = () => {
                   Satelite Centre & Chandrayan Project.
                 </li>
                 <li>
-                  Mr. Dhakshinamoorthy R, Pricipal Enterprise Architect, IoT BU,
+                  Mr. Dhakshinamoorthy R, Principal Enterprise Architect, IoT BU,
                   TCS
                 </li>
               </Ul>
