@@ -16,9 +16,11 @@ import { useState } from "react";
 
 import { GrClose } from "react-icons/gr";
 
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu, GiPublicSpeaker } from "react-icons/gi";
 
 import { FcAbout } from "react-icons/fc";
+
+// GiPublicSpeaker
 // import { GrClose } from 'react-icons/gr'
 
 // import Popup from './components/Popup';
@@ -76,7 +78,7 @@ const Header = () => {
         </li> */}
 
         <li>
-          {/* <FcAbout size={25} /> */}
+          <GiPublicSpeaker size={25} />
           <a href="/chiefguest">Cheif guest</a>
         </li>
 

@@ -524,31 +524,31 @@ const Hero = () => {
               </h1>
             </Head1>
             <div className="p-5 gap-y-5 font-[500] text-sm md:text-lg grid grid-cols-2 grid-flow-row font-poppins mt-10 bg-gray-200 rounded-2xl">
-              <div className="font-extrabold text-sky-900 text-[16px]">
+              <div className="font-extrabold text-sky-900 text-[16px] md:text-2xl">
                 Type Of Registration
               </div>
-              <div className="font-extrabold text-sky-900 text-[16px]">
+              <div className="font-extrabold text-sky-900 text-[16px] md:text-2xl">
                 Registration Fee
               </div>
               <div className="">
                 Publication with Taylor & Francis Conference Proceedings <br />
                 <span className="text-red-600">( SCOPUS INDEXED) </span>
               </div>
-              <div className="flex mt-[10px]">
+              <div className="flex mt-[10px] ml-10 md:ml-0">
                 <FaRupeeSign size={20} className="md:ml-[230px]" /> 9500 Rs/-
               </div>
 
               <div> Publication with InderScience/Universal Wiser</div>
-              <div className="flex mt-[10x]">
+              <div className="flex mt-[10x] ml-10 md:ml-0">
                 {" "}
-                <FaRupeeSign size={20} className="md:ml-[230px]" /> 1500 Rs/-
+                <FaRupeeSign size={20} className="md:ml-[230px] " /> 1500 Rs/-
               </div>
               <div>
                 <span className="text-red-600">(Only Participants) </span>
                 <br /> <span>Listener</span>
                 <span> Per Day</span>
               </div>
-              <div className="flex mt-[10px]">
+              <div className="flex mt-[10px] ml-10 md:ml-0">
                 <FaRupeeSign size={20} className="md:ml-[230px]" /> 500 Rs/-
               </div>
               <div>
@@ -556,8 +556,9 @@ const Hero = () => {
                 <span className=" text-red-600"> (SCOPUS INDEXED)</span> Foreign
                 Authors
               </div>
-              <div className="flex mt-3">
-                <FaDollarSign size={20} className="md:ml-[230px]" /> 120 USD/-
+              <div className="flex ml-10 md:ml-0 mt-2 md:mt-0">
+                <FaDollarSign size={20} className="md:mt-1 md:ml-[230px]" /> 120
+                USD/-
               </div>
             </div>
           </div>
