@@ -23,7 +23,7 @@ const chiefGuest = () => {
             />
             </div>
             <Border
-          id="ob"
+          
           className=" border-double border-[4px]  border-sky-600 animate "
         />
             <span className='text-justify animate'>
@@ -48,11 +48,15 @@ const Div = styled.div`
  
     font-family: poppins   ;
 
-    @media (max-width: 768px) and (orientation: portrait){
+    @media screen and (max-width: 768px) and (orientation: portrait){
         width: 100%;
         flex-direction: column;
     }
+
    
+    @media screen and (max-width: 768px) and (orientation: landscape){
+        /* display: none; */
+    }
 `
 
 const LeftWrap = styled.div`
@@ -71,14 +75,23 @@ const LeftWrap = styled.div`
         /* flex-direction: column; */
         width: 100%;
         img{
-            width: 220px;
-            height: 220px;
+            width: 250px;
+            height: 230px;
             border-radius: 100%;
         }
         /* width: 200px; */
         /* height: 100px; */
         justify-content: center;
 
+    }
+
+    @media (max-width: 768px) and (orientation: landscape){
+        
+        width: 30%;
+        img{
+                width: 30px;
+                height: 30px;
+            }
     }
     /* margin-right: 20px; */
 `;
@@ -89,7 +102,7 @@ const RightWrap = styled.div`
     flex-direction: column;
     padding-left: 30px;
     /* justify-content: center; */
-
+    /* align-items: center; */
     h1{
         /* margin-left: 150px; */
         margin-top: 20px;
@@ -117,10 +130,12 @@ const RightWrap = styled.div`
         
         width: 100%;
         align-items: center;
+        padding: 0;
         /* margin: 0;
         padding: 0; */
             /* justify-content: center; */
         h1{
+            margin:0;
             margin-top: 15px;
             padding: 0;
             font-size: 23px;
@@ -128,9 +143,28 @@ const RightWrap = styled.div`
         }
         
         div{
-            font-size: 1px;
+            /* font-size: 1px; */
+            margin: 0;
+            margin-bottom: 10px;
+            padding: 0 17px;
+            /* margin: 0; */
         }
+
+        span{
+            margin: 0;
+            font-size: 18px;
+            padding: 0 20px;
+        }
+
+      
     }
+    @media(max-width: 768px) and (orientation: landscape){
+            width: 70%;
+            h1{
+                display: none;
+            }
+        }
+    /* @media (max-width: 768px) and (orientation: portrait) */
 
 
 `;
@@ -139,4 +173,8 @@ const Border = styled.div`
     margin-right: 180px;
     margin-top: 10px;
     margin-bottom: 20px;
+
+    @media (max-width: 768px) and (orientation: portrait){
+       display: none;
+    }
 `;
