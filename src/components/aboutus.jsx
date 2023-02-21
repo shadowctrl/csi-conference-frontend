@@ -66,31 +66,43 @@ const Aboutus = () => {
       <ImportantLinks className="underline il ">
         <Link className="animate-pulse">
           {" "}
-          <a href="https://bit.ly/3VkMlmL" className="">
+          <a href="https://bit.ly/3VkMlmL" target="_blank" className="">
             Click here to register{" "}
           </a>
         </Link>
         <Link className="animate-pulse">
           {" "}
-          <a href="https://bit.ly/3jIQkMM"> Click here to download Flyer</a>
+          <a href="https://bit.ly/3jIQkMM" target="_blank">
+            {" "}
+            Click here to download Flyer
+          </a>
         </Link>
 
         <Link className="animate-pulse">
           {" "}
-          <a href="https://www.routledge.com/Conference-Proceedings-Series-on-Intelligent-Systems-Data-Engineering/book-series/CPSISDEO">
+          <a
+            href="https://www.routledge.com/Conference-Proceedings-Series-on-Intelligent-Systems-Data-Engineering/book-series/CPSISDEO"
+            target="_blank"
+          >
             Publication{" "}
           </a>
         </Link>
         <Link className="animate-pulse">
           {" "}
-          <a href="http://bit.ly/3gGUdRr"> Submission Link </a>
-        </Link>
-        <Link className="animate-pulse">
-          {" "}
-          <a href="http://www.csi-kancheepuram.org/conference.html">
-            Click here for more information
+          <a href="http://bit.ly/3gGUdRr" target="_blank">
+            {" "}
+            Submission Link{" "}
           </a>
         </Link>
+        {/* <Link className="animate-pulse">
+          {" "}
+          <a
+            href="http://www.csi-kancheepuram.org/conference.html"
+            target="_blank"
+          >
+            Click here for more information
+          </a>
+        </Link> */}
       </ImportantLinks>
 
       <Contact className="py-2">
