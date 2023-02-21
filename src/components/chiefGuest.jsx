@@ -17,7 +17,7 @@ const chiefGuest = () => {
            <div>
            <Typewriter
                 onInit={(typewriter) => {
-                typewriter.typeString("<h2>Former Director, ISRO Satelite Centre & Chandrayan Project.</h2>")
+                typewriter.typeString("Former Director, ISRO Satelite Centre & Chandrayan Project.")
                 typewriter.start();
             }}
             />
@@ -27,7 +27,7 @@ const chiefGuest = () => {
           className=" border-double border-[4px]  border-sky-600 animate "
         />
             <span className='text-justify animate'>
-                Mylswamy Annadurai is known byname Moon Man of India, he was born on July 2, 1958, Kodhawady, Tamil Nadu, India. 
+                Mylswamy Annadurai is known by name Moon Man of India, he was born on July 2, 1958, Kodhawady, Tamil Nadu, India. 
                 He is an Indian aerospace engineer who held a number of posts with the Indian Space Research Organisation (ISRO), 
                 including the directorship (2015–18) of the U R Rao Satellite Centre (formerly the ISRO Satellite Centre).
                 Following his early education in his native village, Annadurai in 1980 earned a bachelor’s degree in engineering 
@@ -78,11 +78,14 @@ const RightWrap = styled.div`
 
     }
 
-    h2{
+    div{
         font-size: 20px;
        color: rgb(249, 115, 22);;
        font-weight: 500;
     }
+    /* div{
+        margin-right: 0;
+    } */
 
     span{
         margin-right: 50px;

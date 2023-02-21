@@ -82,13 +82,13 @@ const Header = () => {
 
         <li>
           <GiPublicSpeaker size={25} />
-          <a href="/chiefGuest"><button onClick={ () => setButtonPopup(false)}>Cheif guest</button></a>
+          <a href="/chiefGuest"><button onClick={ () => setButtonPopup(false)}>Chief guest</button></a>
         </li>
 
         <li>
           {/* <FcAbout size={25} /> */}
           <CgNotes size={25} />
-          <a href="/#r">Registrations</a>
+          <a href="http://localhost:3333/#r">Registrations</a>
         </li>
 
         <li>
@@ -169,7 +169,7 @@ const Header = () => {
           <li>
             <MenuWrap>
             <CgNotes size={25} />
-              <a href="/#r">
+              <a href="http://localhost:3333/#r">
                 <button onClick={() => setBurgerStatus(false)}>
                 Registrations
                 </button>

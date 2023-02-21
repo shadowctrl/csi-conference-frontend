@@ -6,7 +6,7 @@ const Info = () => {
   return (
     <InfoC className="bg-slate-700">
       <BiCopyright size={22} />
-      <span>CSI-Kancheepuram.org - All right reserved</span>
+      <span>icngt2023.org - All rights reserved.</span>
     </InfoC>
   );
 };
