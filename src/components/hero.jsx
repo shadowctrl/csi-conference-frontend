@@ -556,11 +556,11 @@ const Hero = () => {
                   Registrations And Payments
                 </h1>
               </Head1>
-              <div className="p-5 gap-y-5 font-[500] text-sm md:text-lg grid grid-cols-2 grid-flow-row font-poppins mt-10 bg-gray-200 rounded-2xl">
-                <div className="font-extrabold text-sky-900 text-[16px] md:text-2xl">
+              <Grid className="p-5 gap-y-5 font-[500] text-sm md:text-lg grid grid-cols-2 grid-flow-row font-poppins mt-10 bg-gray-200 rounded-2xl">
+                <div className=" flex justify-center items-center font-extrabold text-sky-900 text-[16px] md:text-2xl">
                   Type Of Registration
                 </div>
-                <div className="font-extrabold text-sky-900 text-[16px] md:text-2xl">
+                <div className="flex justify-center font-extrabold text-sky-900 text-[16px] md:text-2xl">
                   Registration Fee
                 </div>
                 <div className="">
@@ -568,33 +568,42 @@ const Hero = () => {
                   <br />
                   <span className="text-red-600">( SCOPUS INDEXED) </span>
                 </div>
-                <div className="flex mt-[10px] ml-10 md:ml-0">
-                  <FaRupeeSign size={20} className="md:ml-[230px]" /> 9500 Rs/-
+                <div className="flex-1 mt-[10px] ml-10 md:ml-0">
+                  {/* <FaRupeeSign size={20} className="md:ml-[230px]" />  */}
+                  9500 Rs/-
                 </div>
 
-                <div> Publication with InderScience/Universal Wiser</div>
-                <div className="flex mt-[10x] ml-10 md:ml-0">
+                <div>
                   {" "}
-                  <FaRupeeSign size={20} className="md:ml-[230px] " /> 1500 Rs/-
+                  Publication with InderScience/Universal Wiser <br />
+                  <span className=" text-red-600"> (Free for Journals)</span>
+                </div>
+                <div className="flex-1 mt-[10x] ml-10 md:ml-[10.3rem]">
+                  {" "}
+                  {/* <FaRupeeSign size={20} className="md:ml-[230px] " />  */}
+                  1500 Rs/-
+                  <span className="ml-2 text-red-600">(Conference Fee)</span>
                 </div>
                 <div>
-                  <span className="text-red-600">(Only Participants) </span>
-                  <br /> <span>Listener</span>
+                  <span>Listener</span>
                   <span> Per Day</span>
+                  <br />
+                  <span className="text-red-600">(Only Participants) </span>
                 </div>
-                <div className="flex mt-[10px] ml-10 md:ml-0">
-                  <FaRupeeSign size={20} className="md:ml-[230px]" /> 500 Rs/-
+                <div className="flex-1 mt-[10px] ml-10 md:ml-0">
+                  {/* <FaRupeeSign size={20} className="md:ml-[230px]" />  */}
+                  500 Rs/-
                 </div>
                 <div>
                   {" "}
-                  <span className=" text-red-600"> (SCOPUS INDEXED)</span>{" "}
-                  Foreign Authors
+                  Foreign Authors <br />
+                  <span className=" text-red-600"> (SCOPUS INDEXED)</span>
                 </div>
-                <div className="flex ml-10 md:ml-0 mt-2 md:mt-0">
-                  <FaDollarSign size={20} className="md:mt-1 md:ml-[230px]" />{" "}
+                <div className="flex-1 ml-10 md:ml-0 mt-2 md:mt-0">
+                  {/* <FaDollarSign size={20} className="md:mt-1 md:ml-[230px]" />{" "} */}
                   120 USD/-
                 </div>
-              </div>
+              </Grid>
 
               <div className="text-2xl text-sky-500 font-bold mt-5 underline animate-bounce">
                 <a href="https://bit.ly/3VkMlmL" target="_blank">
@@ -694,3 +703,5 @@ const Payment = styled.div`
     margin-left: 4px;
   }
 `;
+
+const Grid = styled.div``;
