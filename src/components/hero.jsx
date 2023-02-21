@@ -159,7 +159,7 @@ const Hero = () => {
               </Head1>
             </div>
 
-            <Para1 className="antialiased text-justify mt-8">
+            <Para1 className="antialiased text-left mt-8">
               <div className="a opacity-0">
                 <CommiteeTitle>Chief Patrons: </CommiteeTitle>
 
