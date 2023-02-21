@@ -54,9 +54,7 @@ const Div = styled.div`
     }
 
    
-    @media screen and (max-width: 768px) and (orientation: landscape){
-        /* display: none; */
-    }
+ 
 `
 
 const LeftWrap = styled.div`
@@ -84,7 +82,7 @@ const LeftWrap = styled.div`
         justify-content: center;
 
     }
-
+/* 
     @media (max-width: 768px) and (orientation: landscape){
         
         width: 30%;
@@ -92,7 +90,7 @@ const LeftWrap = styled.div`
                 width: 30px;
                 height: 30px;
             }
-    }
+    } */
     /* margin-right: 20px; */
 `;
 
@@ -158,12 +156,12 @@ const RightWrap = styled.div`
 
       
     }
-    @media(max-width: 768px) and (orientation: landscape){
+    /* @media(max-width: 768px) and (orientation: landscape){
             width: 70%;
             h1{
                 display: none;
             }
-        }
+        } */
     /* @media (max-width: 768px) and (orientation: portrait) */
 
 
