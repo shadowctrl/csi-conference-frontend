@@ -34,7 +34,6 @@ const Header = () => {
   const [burgerStatus, setBurgerStatus] = useState(false);
 
   return (
-    
     <HeaderC className="bg-slate-700 py-7 md:py-0">
       <TopNav className="">
         <Logo className="">
@@ -82,7 +81,9 @@ const Header = () => {
 
         <li>
           <GiPublicSpeaker size={25} />
-          <a href="/chiefGuest"><button onClick={ () => setButtonPopup(false)}>Chief guest</button></a>
+          <a href="/chiefGuest">
+            <button onClick={() => setButtonPopup(false)}>Chief guest</button>
+          </a>
         </li>
 
         <li>
@@ -158,20 +159,22 @@ const Header = () => {
             
 
           </li> */}
-            <li>
+          <li>
             <MenuWrap>
-            <GiPublicSpeaker size={25} />
+              <GiPublicSpeaker size={25} />
               <a href="/chiefGuest">
-                <button onClick={() => setBurgerStatus(false)}>Chief Guest</button>
+                <button onClick={() => setBurgerStatus(false)}>
+                  Chief Guest
+                </button>
               </a>
             </MenuWrap>
           </li>
           <li>
             <MenuWrap>
-            <CgNotes size={25} />
+              <CgNotes size={25} />
               <a href="http://localhost:3333/#r">
                 <button onClick={() => setBurgerStatus(false)}>
-                Registrations
+                  Registrations
                 </button>
               </a>
             </MenuWrap>
@@ -194,9 +197,6 @@ const Header = () => {
         {/* <img src='/images/csi-broch2' /> */}
       </Popup>
     </HeaderC>
-                                           
-    
-    
   );
 };
 
@@ -230,8 +230,8 @@ const Main = styled.div``;
 const TopNav = styled.div`
   padding-top: 20px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding-left: 450px;
   /* width: 70%; */
   /* background-color: black; */
   /* height: 80%; */
