@@ -45,6 +45,20 @@ export default chiefGuest
 const Div = styled.div`
     
     display: flex;
+ 
+    font-family: poppins   ;
+
+    @media (max-width: 768px) and (orientation: portrait){
+        width: 100%;
+        flex-direction: column;
+    }
+   
+`
+
+const LeftWrap = styled.div`
+
+    width: 35%;
+    display: flex;
     img{
         margin-top: 30px;
         width: 500px;
@@ -52,13 +66,20 @@ const Div = styled.div`
         border-radius: 25px;
         /* display: flex; */
     }
-    font-family: poppins   ;
-   
-`
+    @media (max-width: 768px) and (orientation: portrait){
 
-const LeftWrap = styled.div`
+        /* flex-direction: column; */
+        width: 100%;
+        img{
+            width: 220px;
+            height: 220px;
+            border-radius: 100%;
+        }
+        /* width: 200px; */
+        /* height: 100px; */
+        justify-content: center;
 
-    width: 35%;
+    }
     /* margin-right: 20px; */
 `;
 
@@ -90,6 +111,25 @@ const RightWrap = styled.div`
     span{
         margin-right: 50px;
         font-size: 23px;
+    }
+
+    @media (max-width: 768px) and (orientation: portrait){
+        
+        width: 100%;
+        align-items: center;
+        /* margin: 0;
+        padding: 0; */
+            /* justify-content: center; */
+        h1{
+            margin-top: 15px;
+            padding: 0;
+            font-size: 23px;
+            
+        }
+        
+        div{
+            font-size: 1px;
+        }
     }
 
 
