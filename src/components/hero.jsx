@@ -202,15 +202,15 @@ const Hero = () => {
               </CommiteeTitle>
               <Ul className="">
                 <li>
-                  <span>Committe Head:</span> Mr. P. V. Subramanian, Past
+                  <span>Committee Head:</span> Mr. P. V. Subramanian, Past
                   Chairperson, CSI Chennai Chapter{" "}
                 </li>
                 <li>
                   {" "}
                   <span>Secretary:</span>
                   Dr. M. Senthil Kumar, Professor & Head, Cyber Security, SRM
-                  Valliammai Engineering College, Chennai and past Secretary,
-                  CSI <h1 className="ml-[24px]">Kancheepuram Chapter </h1>
+                  Valliammai Engineering College and past Secretary, CSI{" "}
+                  <h1 className="ml-[24px]">Kancheepuram Chapter </h1>
                 </li>
                 <li>
                   <span>Treasurer:</span>
@@ -582,6 +582,13 @@ const Hero = () => {
                 <FaDollarSign size={20} className="md:mt-1 md:ml-[230px]" /> 120
                 USD/-
               </div>
+            </div>
+
+            <div className="text-2xl text-sky-500 font-bold mt-5 underline animate-bounce">
+              <a href="https://bit.ly/3VkMlmL" target="_blank">
+                {" "}
+                Click Here to Register
+              </a>
             </div>
           </div>
           <Payment className="payment">
