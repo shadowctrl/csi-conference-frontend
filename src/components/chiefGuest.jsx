@@ -67,7 +67,8 @@ const LeftWrap = styled.div`
     display: flex;
     img{
         margin-top: 30px;
-        width: 500px;
+        margin-left: 30px;
+        width: 480px;
         height: 300px;
         border-radius: 25px;
         /* display: flex; */
