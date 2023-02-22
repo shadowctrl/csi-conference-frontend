@@ -48,10 +48,14 @@ const Div = styled.div`
  
     font-family: poppins   ;
 
-    @media screen and (max-width: 768px) and (orientation: portrait){
-        width: 100%;
-        flex-direction: column;
-    }
+
+@media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
+    width: 100%;
+    flex-direction: column;
+}
+@media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {
+    width: 100%;
+}
 
    
  
@@ -68,29 +72,38 @@ const LeftWrap = styled.div`
         border-radius: 25px;
         /* display: flex; */
     }
-    @media (max-width: 768px) and (orientation: portrait){
 
-        /* flex-direction: column; */
+
+
+
+       /* @media (max-width: 768px) and (orientation: portrait){ */
+
+        
+    
+
+    @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
         width: 100%;
         img{
             width: 250px;
             height: 230px;
             border-radius: 100%;
         }
-        /* width: 200px; */
-        /* height: 100px; */
+ 
         justify-content: center;
-
     }
-/* 
-    @media (max-width: 768px) and (orientation: landscape){
-        
-        width: 30%;
+
+    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {
+
+        width:40%;
         img{
-                width: 30px;
-                height: 30px;
-            }
-    } */
+            width: 220px;
+            height: 200px;
+            border-radius: 100%;
+            margin-left: 40px;
+        }
+    }
+/*  */
+
     /* margin-right: 20px; */
 `;
 
@@ -124,8 +137,8 @@ const RightWrap = styled.div`
         font-size: 23px;
     }
 
-    @media (max-width: 768px) and (orientation: portrait){
-        
+ 
+    @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
         width: 100%;
         align-items: center;
         padding: 0;
@@ -153,16 +166,20 @@ const RightWrap = styled.div`
             font-size: 18px;
             padding: 0 20px;
         }
-
-      
     }
-    /* @media(max-width: 768px) and (orientation: landscape){
-            width: 70%;
-            h1{
-                display: none;
-            }
-        } */
-    /* @media (max-width: 768px) and (orientation: portrait) */
+    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {
+        width: 60%;
+        /* align-items: center; */
+        padding: 0;
+        margin: 0;
+        h1{
+            font-size: 30px;
+        }
+
+        span{
+            font-size: 15px;
+        }
+    }
 
 
 `;
@@ -172,7 +189,13 @@ const Border = styled.div`
     margin-top: 10px;
     margin-bottom: 20px;
 
-    @media (max-width: 768px) and (orientation: portrait){
-       display: none;
+    
+    
+    @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
+        display: none;
     }
-`;
+    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {
+        margin-right: 55px;
+        margin-top: 10px;
+    }
+`
