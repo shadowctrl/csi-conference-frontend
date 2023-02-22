@@ -26,7 +26,6 @@ import { Outlet } from "react-router-dom";
 // import { GrClose } from 'react-icons/gr'
 
 // import Popup from './components/Popup';
-
 const Header = ({ value }) => {
   // const [modalShow, setModalShow] = React.useState(false);
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -247,7 +246,7 @@ const Logo = styled.div`
   width: 110px;
   height: 110px;
   margin: 10px 20px;
-  
+
   @media (max-width: 1060px) {
     margin: 0;
     padding: 0;

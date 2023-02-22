@@ -2,7 +2,7 @@ import { Component, React, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import "./hero.css";
 import Aboutus from "./aboutus";
-import Header from "./Header";
+import Ding from "./Header";
 import { FaRupeeSign } from "react-icons/fa";
 import { FaDollarSign } from "react-icons/fa";
 
@@ -10,13 +10,12 @@ import Info from "./Info";
 // const handleBurgerStatus = () => {
 //   <Header key={this.state.id} />;
 // };
-
+const handleBurgerStatus = () => {
+  <Ding />;
+};
 const Hero = () => {
   const [burgerStatus, setBurgerStatus] = useState(false);
-  const handleBurgerStatus = () => {
-    setBurgerStatus((e) => !e);
-    <Header value={burgerStatus} />;
-  };
+
   useEffect(() => {
     const options = {
       root: null,
@@ -46,7 +45,7 @@ const Hero = () => {
   });
 
   return (
-    <div onClick={() => handleBurgerStatus}>
+    <div className="cursor-pointer" onClick={() => handleBurgerStatus()}>
       <Main className="mt-10 text-center">
         <Title className="font-poppins text-center text-sky-600 text-sm md:text-xl font-extrabold">
           International Conference on Next-Gen Technologies in Computational
