@@ -13,8 +13,7 @@ import Info from "./Info";
 
 const Hero = () => {
   const [burgerStatus, setBurgerStatus] = useState(false);
-
-  //senthil
+  //raghav
   const handleBurgerStatus = () => {
     setBurgerStatus((e) => !e);
     <Header value={burgerStatus} />;
