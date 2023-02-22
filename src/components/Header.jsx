@@ -27,12 +27,11 @@ import { Outlet } from "react-router-dom";
 
 // import Popup from './components/Popup';
 
-const Header = () => {
+const Header = ({ value }) => {
   // const [modalShow, setModalShow] = React.useState(false);
   const [buttonPopup, setButtonPopup] = useState(false);
-
+  console.log(value);
   const [burgerStatus, setBurgerStatus] = useState(false);
-
   return (
     <HeaderC className="bg-slate-700 py-7 md:py-0">
       <TopNav className="">

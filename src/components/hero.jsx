@@ -1,13 +1,23 @@
-import { React, useEffect, useRef } from "react";
+import { Component, React, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import "./hero.css";
 import Aboutus from "./aboutus";
+import Header from "./Header";
 import { FaRupeeSign } from "react-icons/fa";
 import { FaDollarSign } from "react-icons/fa";
 
 import Info from "./Info";
+// const handleBurgerStatus = () => {
+//   <Header key={this.state.id} />;
+// };
 
 const Hero = () => {
+  const [burgerStatus, setBurgerStatus] = useState(false);
+
+  const handleBurgerStatus = () => {
+    setBurgerStatus((e) => !e);
+    <Header value={burgerStatus} />;
+  };
   useEffect(() => {
     const options = {
       root: null,
@@ -37,7 +47,7 @@ const Hero = () => {
   });
 
   return (
-    <div>
+    <div onClick={() => handleBurgerStatus}>
       <Main className="mt-10 text-center">
         <Title className="font-poppins text-center text-sky-600 text-sm md:text-xl font-extrabold">
           International Conference on Next-Gen Technologies in Computational
@@ -134,24 +144,6 @@ const Hero = () => {
             className=" border-double border-[4px] mt-[40px] md:ml-[128px] md:mr-[128px] 
           ml-[32px] mr-[32px] border-sky-600  "
           />
-          {/* <Div className=" md:ml-48 md:mr-48 ml-6 mr-6 font-poppins animate">
-          <div className="z opacity-0">
-            <Head1 className="md:ml-32 md:mr-32 mr-8 ml-8 font-bold md:text-xl mt-10 text-sky-200 rounded-3xl bg-gray-gradient ">
-              <h1 className="">Chief Guest </h1>
-            </Head1>
-          </div>
-          <Para1 className="antialiased text-justify mt-8">
-            <div className="a opacity-0">
-            <CommiteeTitle>Dr. Mylswamy Annadurai,Former Director, ISRO Satelite Centre & Chandrayan Project.</CommiteeTitle>
-            </div>
-
-          </Para1>
-        </Div>
-        <Border
-          id="cm"
-          className=" border-double border-[4px] mt-[40px] md:ml-[128px] md:mr-[128px] 
-          ml-[32px] mr-[32px] border-sky-600  "
-        /> */}
           <Div className=" md:ml-48 md:mr-48 ml-6 mr-6 font-poppins animate">
             <div className="z opacity-0">
               <Head1 className="md:ml-32 md:mr-32 mr-8 ml-8 font-bold md:text-xl mt-10 text-sky-200 rounded-3xl bg-gray-gradient ">
