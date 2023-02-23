@@ -27,126 +27,125 @@ import { Outlet } from "react-router-dom";
 
 // import Popup from './components/Popup';
 const Header = () => {
-  const Header = () => {
-    const [buttonPopup, setButtonPopup] = useState(false);
-    const [burgerStatus, setBurgerStatus] = useState(false);
-    return (
-      <HeaderC className="bg-slate-700 py-7 md:py-0">
-        <TopNav className="">
-          <Logo className="">
-            <a href="/">
-              <img src="/images/csilogo.png" />
-            </a>
-          </Logo>
+  const [buttonPopup, setButtonPopup] = useState(false);
+  const [burgerStatus, setBurgerStatus] = useState(false);
+  return (
+    <HeaderC className="bg-slate-700 py-7 md:py-0">
+      <TopNav className="">
+        <Logo className="">
+          <a href="/">
+            <img src="/images/csilogo.png" />
+          </a>
+        </Logo>
 
-          <Heading className="font-poppins text-white font-extrabold ml-2">
-            <h1 className="sm:text-3xl ">COMPUTER SOCIETY OF INDIA</h1>
-            <span>
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter.typeString("Region 7 Chapters");
-                  typewriter.start();
-                }}
-              />
-            </span>
-          </Heading>
-        </TopNav>
-        <BottomNav style={{ color: "#f5f5f5" }}>
-          <li>
-            <AiFillHome size={`25`} />
-            <a href="#">
-              <button onClick={() => setButtonPopup(true)}>Home</button>
-            </a>
-          </li>
-          <li>
-            <MdGroups size={30} />
-            <a href="/#ac">About Conference</a>
-          </li>
-          <li>
-            <BiBody size={25} />
-            <a href="/#ob">Organising body</a>
-          </li>
-          <li>
-            <MdOutlineGroupAdd size={30} />
-            <a href="/#cm">Committee members</a>
-          </li>
-          {/* <li>
+        <Heading className="font-poppins text-white font-extrabold ml-2">
+          <h1 className="sm:text-3xl ">COMPUTER SOCIETY OF INDIA</h1>
+          <span>
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter.typeString("Region 7 Chapters");
+                typewriter.start();
+              }}
+            />
+          </span>
+        </Heading>
+      </TopNav>
+      <BottomNav style={{ color: "#f5f5f5" }}>
+        <li>
+          <AiFillHome size={`25`} />
+          <a href="#">
+            <button onClick={() => setButtonPopup(true)}>Home</button>
+          </a>
+        </li>
+        <li>
+          <MdGroups size={30} />
+          <a href="/#ac">About Conference</a>
+        </li>
+        <li>
+          <BiBody size={25} />
+          <a href="/#ob">Organising body</a>
+        </li>
+        <li>
+          <MdOutlineGroupAdd size={30} />
+          <a href="/#cm">Committee members</a>
+        </li>
+        {/* <li>
           
           <RiLinksFill size={27} />
           <a href="#il">Important links</a>
         </li> */}
 
-          <li>
-            <GiPublicSpeaker size={25} />
-            <a href="/chiefGuest">
-              <button onClick={() => setButtonPopup(false)}>Chief guest</button>
-            </a>
-          </li>
+        <li>
+          <GiPublicSpeaker size={25} />
+          <a href="/chiefGuest">
+            <button onClick={() => setButtonPopup(false)}>Chief guest</button>
+          </a>
+        </li>
 
-          <li>
-            {/* <FcAbout size={25} /> */}
-            <CgNotes size={25} />
-            <a href="http://localhost:3333/#r">Registrations</a>
-          </li>
+        <li>
+          {/* <FcAbout size={25} /> */}
+          <CgNotes size={25} />
+          <a href="http://localhost:3333/#r">Registrations</a>
+        </li>
 
-          <li>
-            <FcAbout size={25} />
-            <a href="/#au">About Us</a>
-          </li>
-        </BottomNav>
-        <BottomNavPh>
-          <Button onClick={() => setBurgerStatus(true)}>
-            <GiHamburgerMenu size={25} />
-          </Button>
-          {/* <button onClick={ () => setBurgerStatus(true)}>
+        <li>
+          <FcAbout size={25} />
+          <a href="/#au">About Us</a>
+        </li>
+      </BottomNav>
+      <BottomNavPh>
+        <Button onClick={() => setBurgerStatus(true)}>
+          <GiHamburgerMenu size={25} />
+        </Button>
+        {/* <button onClick={ () => setBurgerStatus(true)}>
           <GiHamburgerMenu size={25} />
         </button> */}
-          <BurgerNav
-            show={burgerStatus}
-            className="rounded-xl bg-gray-gradient sm:w-[70vh] w-[25vh]"
-          >
-            <CloseBgNav onClick={() => setBurgerStatus(false)}>
-              <RiCloseCircleFill size={30} />
-            </CloseBgNav>
-            <li>
-              <MenuWrap>
-                <AiFillHome size={25} />
-                <a href="#">
-                  <button onClick={() => setButtonPopup(true)}>Home</button>
-                </a>
-              </MenuWrap>
-            </li>
-            <li>
-              <MenuWrap>
-                <MdGroups size={30} />
-                <a href="/#ac">
-                  <button onClick={() => setBurgerStatus(false)}>
-                    About Conference
-                  </button>
-                </a>
-              </MenuWrap>
-            </li>
-            <li>
-              <MenuWrap>
-                <BiBody size={25} />
-                <a href="/#ob">
-                  <button onClick={() => setBurgerStatus(false)}>
-                    Organising body
-                  </button>
-                </a>
-              </MenuWrap>
-            </li>
-            <li>
-              <MenuWrap>
-                <MdOutlineGroupAdd size={30} />
-                <a href="/#cm">
-                  <button onClick={() => setBurgerStatus(false)}>
-                    Committee members
-                  </button>
-                </a>
-              </MenuWrap>
-            </li>
-            {/* <li>
+        <BurgerNav
+          show={burgerStatus}
+          className="rounded-xl bg-gray-gradient sm:w-[70vh] w-[25vh]"
+        >
+          <CloseBgNav onClick={() => setBurgerStatus(false)}>
+            <RiCloseCircleFill size={30} />
+          </CloseBgNav>
+          <li>
+            <MenuWrap>
+              <AiFillHome size={25} />
+              <a href="#">
+                <button onClick={() => setButtonPopup(true)}>Home</button>
+              </a>
+            </MenuWrap>
+          </li>
+          <li>
+            <MenuWrap>
+              <MdGroups size={30} />
+              <a href="/#ac">
+                <button onClick={() => setBurgerStatus(false)}>
+                  About Conference
+                </button>
+              </a>
+            </MenuWrap>
+          </li>
+          <li>
+            <MenuWrap>
+              <BiBody size={25} />
+              <a href="/#ob">
+                <button onClick={() => setBurgerStatus(false)}>
+                  Organising body
+                </button>
+              </a>
+            </MenuWrap>
+          </li>
+          <li>
+            <MenuWrap>
+              <MdOutlineGroupAdd size={30} />
+              <a href="/#cm">
+                <button onClick={() => setBurgerStatus(false)}>
+                  Committee members
+                </button>
+              </a>
+            </MenuWrap>
+          </li>
+          {/* <li>
             <MenuWrap>
             <RiLinksFill size={27} />
               <a href="#il">
@@ -156,48 +155,45 @@ const Header = () => {
             
 
           </li> */}
-            <li>
-              <MenuWrap>
-                <GiPublicSpeaker size={25} />
-                <a href="/chiefGuest">
-                  <button onClick={() => setBurgerStatus(false)}>
-                    Chief Guest
-                  </button>
-                </a>
-              </MenuWrap>
-            </li>
-            <li>
-              <MenuWrap>
-                <CgNotes size={25} />
-                <a href="http://localhost:3333/#r">
-                  <button onClick={() => setBurgerStatus(false)}>
-                    Registrations
-                  </button>
-                </a>
-              </MenuWrap>
-            </li>
-            <li>
-              <MenuWrap>
-                <FcAbout size={25} />
-                <a href="/#au">
-                  <button onClick={() => setBurgerStatus(false)}>
-                    About Us
-                  </button>
-                </a>
-              </MenuWrap>
-            </li>
-          </BurgerNav>
-        </BottomNavPh>
-        <Popup trigger={buttonPopup}>
-          <button onClick={() => setButtonPopup(false)}>
-            <GrClose size={25} />
-          </button>
-          <img src="/images/csi-broch1.png" />
-          {/* <img src='/images/csi-broch2' /> */}
-        </Popup>
-      </HeaderC>
-    );
-  };
+          <li>
+            <MenuWrap>
+              <GiPublicSpeaker size={25} />
+              <a href="/chiefGuest">
+                <button onClick={() => setBurgerStatus(false)}>
+                  Chief Guest
+                </button>
+              </a>
+            </MenuWrap>
+          </li>
+          <li>
+            <MenuWrap>
+              <CgNotes size={25} />
+              <a href="http://localhost:3333/#r">
+                <button onClick={() => setBurgerStatus(false)}>
+                  Registrations
+                </button>
+              </a>
+            </MenuWrap>
+          </li>
+          <li>
+            <MenuWrap>
+              <FcAbout size={25} />
+              <a href="/#au">
+                <button onClick={() => setBurgerStatus(false)}>About Us</button>
+              </a>
+            </MenuWrap>
+          </li>
+        </BurgerNav>
+      </BottomNavPh>
+      <Popup trigger={buttonPopup}>
+        <button onClick={() => setButtonPopup(false)}>
+          <GrClose size={25} />
+        </button>
+        <img src="/images/csi-broch1.png" />
+        {/* <img src='/images/csi-broch2' /> */}
+      </Popup>
+    </HeaderC>
+  );
 };
 
 export default Header;
