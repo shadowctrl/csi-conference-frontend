@@ -2,17 +2,11 @@ import { Component, React, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import "./hero.css";
 import Aboutus from "./aboutus";
-import Ding from "./Header";
 import { FaRupeeSign } from "react-icons/fa";
 import { FaDollarSign } from "react-icons/fa";
-
 import Info from "./Info";
-// const handleBurgerStatus = () => {
-//   <Header key={this.state.id} />;
-// };
-const handleBurgerStatus = () => {
-  <Ding />;
-};
+import Header from "./Header";
+
 const Hero = () => {
   const [burgerStatus, setBurgerStatus] = useState(false);
 
@@ -45,7 +39,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="cursor-pointer" onClick={() => handleBurgerStatus()}>
+    <div className="cursor-pointer">
       <Main className="mt-10 text-center">
         <Title className="font-poppins text-center text-sky-600 text-sm md:text-xl font-extrabold">
           International Conference on Next-Gen Technologies in Computational
