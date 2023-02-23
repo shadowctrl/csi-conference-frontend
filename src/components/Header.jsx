@@ -346,8 +346,8 @@ const Button = styled.button`
   padding: 0 10px;
   margin: 0px;
   position: absolute;
-  right: 5px;
-  top: 0.5px;
+  right: 25px;
+  top: -10px;
   cursor: pointer;
   z-index: 0;
   color: #f5f5f5;
