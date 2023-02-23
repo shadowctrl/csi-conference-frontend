@@ -26,12 +26,9 @@ import { Outlet } from "react-router-dom";
 // import { GrClose } from 'react-icons/gr'
 
 // import Popup from './components/Popup';
-<<<<<<< HEAD
 const Header = ({ value }) => {
-=======
 
 const Header = () => {
->>>>>>> 8bd8212 (Other Commits)
   // const [modalShow, setModalShow] = React.useState(false);
   const [buttonPopup, setButtonPopup] = useState(false);
   const [burgerStatus, setBurgerStatus] = useState(false);
