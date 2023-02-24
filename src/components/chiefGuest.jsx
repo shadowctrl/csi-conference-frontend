@@ -126,7 +126,7 @@ const RightWrap = styled.div`
 
     div{
         font-size: 20px;
-       color: rgb(249, 115, 22);;
+       color: rgb(249, 115, 22);
        font-weight: 500;
     }
     /* div{

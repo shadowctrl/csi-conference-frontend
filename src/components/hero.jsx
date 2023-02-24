@@ -5,6 +5,11 @@ import Aboutus from "./aboutus";
 import Header from "./Header";
 import { FaRupeeSign } from "react-icons/fa";
 import { FaDollarSign } from "react-icons/fa";
+import ChiefPatronsA from "./ChiefPatronsA";
+import ChiefPatronsB from "./ChiefPatronsB";
+import { chiefPatobj,confChairsobj, confConvpbj } from "../Objects/details";
+import ConfChairs from "./ConfChairs";
+// import ChiefPatronsB from "./chiefPatrons"
 
 import Info from "./Info";
 // const handleBurgerStatus = () => {
@@ -12,6 +17,9 @@ import Info from "./Info";
 // };
 
 const Hero = () => {
+  let ChfPat = 0;
+  let ConfChr = 0;
+
   const [burgerStatus, setBurgerStatus] = useState(false);
   const handleBurgerStatus = () => {
     setBurgerStatus((e) => !e);
@@ -44,6 +52,18 @@ const Hero = () => {
       observer.observe(div);
     });
   });
+
+  let Rend = () => {
+
+    ChfPat+=1;
+    if (ChfPat % 2 ==0){
+      return 0;
+    }
+    else {
+      return 1;
+    }
+    
+  }
 
   return (
     <div onClick={() => handleBurgerStatus}>
@@ -143,7 +163,7 @@ const Hero = () => {
             className=" border-double border-[4px] mt-[40px] md:ml-[128px] md:mr-[128px] 
           ml-[32px] mr-[32px] border-sky-600  "
           />
-          <Div className=" md:ml-48 md:mr-48 ml-6 mr-6 font-poppins animate">
+          <Div className=" md:ml-48 md:mr-48 ml-0 mr-0 font-poppins animate">
             <div className="z opacity-0">
               <Head1 className="md:ml-32 md:mr-32 mr-8 ml-8 font-bold md:text-xl mt-10 text-sky-200 rounded-3xl bg-gray-gradient ">
                 <h1 className="">Committee Members </h1>
@@ -152,9 +172,9 @@ const Hero = () => {
 
             <Para1 className="antialiased text-left mt-8">
               <div className="a opacity-0">
-                <CommiteeTitle>Chief Patrons: </CommiteeTitle>
+                <CommiteeTitle className="">Chief Patrons: </CommiteeTitle>
 
-                <Ul className="">
+                {/* <Ul className="">
                   <li>
                     Dr. Ishari K. Ganesh, founder, chairman and Chancellor of
                     Vels University, Chennai{" "}
@@ -171,11 +191,34 @@ const Hero = () => {
                     IEEE CS Madras & ACM Chennai, Former AVP (Systems), The
                     Hindu{" "}
                   </li>
-                </Ul>
+                </Ul> */}
+                { chiefPatobj.map(member => (
+                   
+                    Rend() ? (
+                      <ChiefPatronsA 
+                        name = {member.name}
+                        about = {member.about}
+                        img = {member.img}
+                      />
+                    )  : (
+                      <ChiefPatronsB
+                      name = {member.name}
+                      about = {member.about}
+                      img = {member.img}
+                    />
+                    )
+                ))
+                  
+                }
+
+                
+          
+             
+                
               </div>
               <div className="cc">
                 <CommiteeTitle>Conference Chair(s) </CommiteeTitle>
-                <Ul>
+                {/* <Ul>
                   <li className="">
                     <span className=" text-orange-500"> Dr. M. MURUGAN</span>,
                     Principal, SRM Valliammai Engineering College and Chairman,
@@ -187,14 +230,42 @@ const Hero = () => {
                     Deputy Director General, National Informatics centre Chennai
                     and past Chair of CSI Chennai Chapter{" "}
                   </li>
-                </Ul>
+                </Ul> */}
+                <ConfGrid>
+
+          
+                { confChairsobj.map(member => (
+                    <ConfChairs
+                      name = {member.name}
+                      about = {member.about}
+                      img = {member.img}
+                      position = {member.position}
+                    />
+                ))
+                }
+
+              </ConfGrid>
+
               </div>
 
               <div className="c opacity-0">
                 <CommiteeTitle className="">
                   Conference Convener(s){" "}
                 </CommiteeTitle>
-                <Ul className="">
+
+                <ConfGrid>
+                { confConvpbj.map(member => (
+                  <ConfChairs  
+                  name = {member.name}
+                  about = {member.about}
+                  img = {member.img}
+                  position = {member.position}
+                  />
+                ))}
+
+                </ConfGrid>
+
+                {/* <Ul className="">
                   <li>
                     <span>Committee Head:</span> Mr. P. V. Subramanian, Past
                     Chairperson, CSI Chennai Chapter{" "}
@@ -230,7 +301,7 @@ const Hero = () => {
                     HoD, Vels Institute of Science, Technology and Advanced
                     Studies
                   </li>
-                </Ul>
+                </Ul> */}
               </div>
 
               <div className="d opacity-0">
@@ -696,3 +767,18 @@ const Payment = styled.div`
 `;
 
 const Grid = styled.div``;
+
+const ConfGrid = styled.div`
+     display: grid;
+     grid-template-columns: auto auto;
+     grid-column-gap: 0;
+     justify-items: stretch;
+     gap: 20px;
+
+
+    @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
+
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+`;
