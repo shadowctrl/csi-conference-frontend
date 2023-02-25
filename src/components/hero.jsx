@@ -203,7 +203,9 @@ const Hero = () => {
                     <span>Treasurer:</span>
                     Dr. A. Prema Kirubakaran, Professor, Vels Institute of
                     Science, Technology and Advanced Studies, Chennai and past
-                    Secretary,{" "}
+                    SecretaryDr. A. Prema Kirubakaran, Professor, Vels Institute
+                    of Science, Technology and Advanced Studies, Chennai and
+                    past Secretary,{" "}
                     <h1 className="ml-[24px]"> CSI Chennai Chapter</h1>
                   </li>
                   <li>
@@ -489,7 +491,7 @@ const Hero = () => {
                 <Ul>
                   <li className="a1">
                     Plagiarism should be less than 10%. [Keep the Plagiarism
-                    Report along with manuscript [May be from TURNITIN].
+                    Report along with manuscript [May be from TURN IT IN].
                   </li>
                   <li className="a2">
                     Grammatical error must NOT be there. Language Clarity is
