@@ -21,12 +21,17 @@ import { GiHamburgerMenu, GiPublicSpeaker } from "react-icons/gi";
 
 import { FcAbout } from "react-icons/fc";
 
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 // GiPublicSpeaker
 // import { GrClose } from 'react-icons/gr'
 
 // import Popup from './components/Popup';
-const Header = () => {
+
+export const HandleBurgerStatus = () => {
+  console.log("Clicked");
+  Header({ status: true });
+};
+const Header = ({ status }) => {
   const [buttonPopup, setButtonPopup] = useState(true);
   const [burgerStatus, setBurgerStatus] = useState(false);
   return (

@@ -1,14 +1,16 @@
-import { Component, React, useEffect, useRef, useState } from "react";
+import { Component, React, useEffect, useRef, useState, setStat } from "react";
 import styled from "styled-components";
 import "./hero.css";
 import Aboutus from "./aboutus";
 import { FaRupeeSign } from "react-icons/fa";
 import { FaDollarSign } from "react-icons/fa";
 import Info from "./Info";
-import Header from "./Header";
+import { HandleBurgerStatus } from "./Header";
+import Arrow from "./arrow";
 
+import { BsFillFileArrowUpFill } from "react-icons/bs";
 const Hero = () => {
-  const [burgerStatus, setBurgerStatus] = useState(false);
+  const [burgerStatus, setBurgerStatus] = useState(true);
 
   useEffect(() => {
     const options = {
@@ -39,7 +41,7 @@ const Hero = () => {
   });
 
   return (
-    <div className="cursor-pointer">
+    <div className="cursor-pointer" onClick={() => HandleBurgerStatus()}>
       <Main className="mt-10 text-center">
         <Title className="font-poppins text-center text-sky-600 text-sm md:text-xl font-extrabold">
           International Conference on Next-Gen Technologies in Computational
