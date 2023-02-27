@@ -11,7 +11,6 @@ import Arrow from "./arrow";
 import { BsFillFileArrowUpFill } from "react-icons/bs";
 const Hero = () => {
   const [burgerStatus, setBurgerStatus] = useState(true);
-
   useEffect(() => {
     const options = {
       root: null,

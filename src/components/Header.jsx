@@ -90,7 +90,7 @@ const Header = ({ status }) => {
         <li>
           {/* <FcAbout size={25} /> */}
           <CgNotes size={25} />
-          <a href="#r">Registrations</a>
+          <a href="/#r">Registrations</a>
         </li>
 
         <li>
@@ -173,7 +173,7 @@ const Header = ({ status }) => {
           <li>
             <MenuWrap>
               <CgNotes size={25} />
-              <a href="#r">
+              <a href="/#r">
                 <button onClick={() => setBurgerStatus(false)}>
                   Registrations
                 </button>
