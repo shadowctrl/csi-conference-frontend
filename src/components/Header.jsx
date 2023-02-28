@@ -30,7 +30,6 @@ import { Outlet } from "react-router-dom";
 const Header = ({ value }) => {
   // const [modalShow, setModalShow] = React.useState(false);
   const [buttonPopup, setButtonPopup] = useState(false);
-  console.log(value);
   const [burgerStatus, setBurgerStatus] = useState(false);
   return (
     <HeaderC className="bg-slate-700 py-7 pb-10 md:py-0">
@@ -249,7 +248,6 @@ const Logo = styled.div`
   margin: 10px 20px;
   transform: scaleX(-1);
 
-  
   @media (max-width: 1060px) {
     margin: 0;
     padding: 0;
@@ -358,7 +356,7 @@ const Button = styled.button`
   color: #f5f5f5;
   margin-top: 0px;
   margin-right: 7px;
-  
+
   /* padding-bottom: 2px; */
 `;
 
