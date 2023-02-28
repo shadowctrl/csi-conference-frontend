@@ -1,4 +1,4 @@
-import { Component, React, useEffect, useRef, useState, setStat } from "react";
+import { React, useEffect, useState } from "react";
 import styled from "styled-components";
 import "./hero.css";
 import Aboutus from "./aboutus";
@@ -7,8 +7,8 @@ import { FaDollarSign } from "react-icons/fa";
 import Info from "./Info";
 import { HandleBurgerStatus } from "./Header";
 import Arrow from "./arrow";
-
 import { BsFillFileArrowUpFill } from "react-icons/bs";
+
 const Hero = () => {
   const [burgerStatus, setBurgerStatus] = useState(true);
   useEffect(() => {

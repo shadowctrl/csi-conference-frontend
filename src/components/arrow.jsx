@@ -3,9 +3,9 @@ import { BsFillFileArrowUpFill } from "react-icons/bs";
 
 const Arrow = () => {
   return (
-    <div className="absolute">
+    <div className="">
       <div>
-        <BsFillFileArrowUpFill size={30} className="text-white" />
+        <BsFillFileArrowUpFill size={30} className="text-black" />
       </div>
     </div>
   );
