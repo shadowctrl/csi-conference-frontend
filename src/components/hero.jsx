@@ -745,9 +745,14 @@ const Ul = styled.div`
 
 const CommiteeTitle = styled.div`
   margin-top: 20px;
+
   color: rgb(12, 74, 110);
   font-size: 1.125rem;
   font-weight: 700;
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
+    padding-left: 35px;
+  }
+
 `;
 
 const Payment = styled.div`

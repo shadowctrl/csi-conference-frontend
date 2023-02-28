@@ -23,6 +23,7 @@ const router = createBrowserRouter (
                     <Route index element={<Hero/>} />
                     <Route path='chiefGuest' element={<ChiefGuest/>} />
                 </Route>
+              
 
                )
               )

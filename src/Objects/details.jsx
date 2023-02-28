@@ -42,7 +42,7 @@ export const confChairsobj = [
     {
         'name':    'Dr.M.Murgan',   
 
-        'about':   'Prinicipal, SRM  Valliammai Engineering College and Chariman, CSI Kancheepuram Chapter.',
+        'about':   'Prinicipal, SRM  Valliammai Engineering College and Chariman.',
 
         'position': `Chairman, CSI Kancheepuram Chapter`,
 
@@ -52,7 +52,7 @@ export const confChairsobj = [
     {
         'name':    'Dr.E.INIYA NEHRU',
 
-        'about':   'Deputy Director General, National Informatics centre Chennai and past Chair of CSI Chennai Chapter.',
+        'about':   'Deputy Director General, National Informatics centre Chennai.',
 
         'position': `Past Chair CSI Chennai Chapter`,
 
