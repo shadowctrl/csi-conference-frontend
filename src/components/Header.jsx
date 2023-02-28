@@ -21,21 +21,19 @@ import { GiHamburgerMenu, GiPublicSpeaker } from "react-icons/gi";
 
 import { FcAbout } from "react-icons/fc";
 
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 // GiPublicSpeaker
 // import { GrClose } from 'react-icons/gr'
 
 // import Popup from './components/Popup';
 
-export const HandleBurgerStatus = () => {
-  console.log("Clicked");
-  Header({ status: true });
-};
-const Header = ({ status }) => {
-  const [buttonPopup, setButtonPopup] = useState(true);
+const Header = ({ value }) => {
+  // const [modalShow, setModalShow] = React.useState(false);
+  const [buttonPopup, setButtonPopup] = useState(false);
+  console.log(value);
   const [burgerStatus, setBurgerStatus] = useState(false);
   return (
-    <HeaderC className="bg-slate-700 py-7 md:py-0">
+    <HeaderC className="bg-slate-700 py-7 pb-10 md:py-0">
       <TopNav className="">
         <Logo className="">
           <a href="/">
@@ -90,7 +88,7 @@ const Header = ({ status }) => {
         <li>
           {/* <FcAbout size={25} /> */}
           <CgNotes size={25} />
-          <a href="/#r">Registrations</a>
+          <a href="http://localhost:3333/#r">Registrations</a>
         </li>
 
         <li>
@@ -100,7 +98,7 @@ const Header = ({ status }) => {
       </BottomNav>
       <BottomNavPh>
         <Button onClick={() => setBurgerStatus(true)}>
-          <GiHamburgerMenu size={25} />
+          <GiHamburgerMenu size={30} />
         </Button>
         {/* <button onClick={ () => setBurgerStatus(true)}>
           <GiHamburgerMenu size={25} />
@@ -173,7 +171,7 @@ const Header = ({ status }) => {
           <li>
             <MenuWrap>
               <CgNotes size={25} />
-              <a href="/#r">
+              <a href="http://localhost:3333/#r">
                 <button onClick={() => setBurgerStatus(false)}>
                   Registrations
                 </button>
@@ -249,7 +247,9 @@ const Logo = styled.div`
   width: 110px;
   height: 110px;
   margin: 10px 20px;
+  transform: scaleX(-1);
 
+  
   @media (max-width: 1060px) {
     margin: 0;
     padding: 0;
@@ -351,12 +351,14 @@ const Button = styled.button`
   padding: 0 10px;
   margin: 0px;
   position: absolute;
-  right: 25px;
-  top: -10px;
+  right: 5px;
+  top: 0.5px;
   cursor: pointer;
   z-index: 0;
   color: #f5f5f5;
-  margin-right: 2px;
+  margin-top: 0px;
+  margin-right: 7px;
+  
   /* padding-bottom: 2px; */
 `;
 
