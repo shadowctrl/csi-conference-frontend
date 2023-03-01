@@ -7,7 +7,7 @@ import { FaRupeeSign } from "react-icons/fa";
 import { FaDollarSign } from "react-icons/fa";
 import ChiefPatronsA from "./ChiefPatronsA";
 import ChiefPatronsB from "./ChiefPatronsB";
-import { chiefPatobj,confChairsobj, confConvpbj } from "../Objects/details";
+import { chiefPatobj, confChairsobj, confConvpbj } from "../Objects/details";
 import ConfChairs from "./ConfChairs";
 // import ChiefPatronsB from "./chiefPatrons"
 
@@ -54,16 +54,13 @@ const Hero = () => {
   });
 
   let Rend = () => {
-
-    ChfPat+=1;
-    if (ChfPat % 2 ==0){
+    ChfPat += 1;
+    if (ChfPat % 2 == 0) {
       return 0;
-    }
-    else {
+    } else {
       return 1;
     }
-    
-  }
+  };
 
   return (
     <div onClick={() => handleBurgerStatus}>
@@ -172,7 +169,7 @@ const Hero = () => {
 
             <Para1 className="antialiased text-left mt-8">
               <div className="a opacity-0">
-                <CommiteeTitle className="">Chief Patrons: </CommiteeTitle>
+                <CommiteeTitle className="">Chief Patrons</CommiteeTitle>
 
                 {/* <Ul className="">
                   <li>
@@ -192,29 +189,21 @@ const Hero = () => {
                     Hindu{" "}
                   </li>
                 </Ul> */}
-                { chiefPatobj.map(member => (
-                   
-                    Rend() ? (
-                      <ChiefPatronsA 
-                        name = {member.name}
-                        about = {member.about}
-                        img = {member.img}
-                      />
-                    )  : (
-                      <ChiefPatronsB
-                      name = {member.name}
-                      about = {member.about}
-                      img = {member.img}
+                {chiefPatobj.map((member) =>
+                  Rend() ? (
+                    <ChiefPatronsA
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
                     />
-                    )
-                ))
-                  
-                }
-
-                
-          
-             
-                
+                  ) : (
+                    <ChiefPatronsB
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
+                    />
+                  )
+                )}
               </div>
               <div className="cc">
                 <CommiteeTitle>Conference Chair(s) </CommiteeTitle>
@@ -232,20 +221,15 @@ const Hero = () => {
                   </li>
                 </Ul> */}
                 <ConfGrid>
-
-          
-                { confChairsobj.map(member => (
+                  {confChairsobj.map((member) => (
                     <ConfChairs
-                      name = {member.name}
-                      about = {member.about}
-                      img = {member.img}
-                      position = {member.position}
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
+                      position={member.position}
                     />
-                ))
-                }
-
-              </ConfGrid>
-
+                  ))}
+                </ConfGrid>
               </div>
 
               <div className="c opacity-0">
@@ -254,15 +238,14 @@ const Hero = () => {
                 </CommiteeTitle>
 
                 <ConfGrid>
-                { confConvpbj.map(member => (
-                  <ConfChairs  
-                  name = {member.name}
-                  about = {member.about}
-                  img = {member.img}
-                  position = {member.position}
-                  />
-                ))}
-
+                  {confConvpbj.map((member) => (
+                    <ConfChairs
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
+                      position={member.position}
+                    />
+                  ))}
                 </ConfGrid>
 
                 {/* <Ul className="">
@@ -747,12 +730,12 @@ const CommiteeTitle = styled.div`
   margin-top: 20px;
 
   color: rgb(12, 74, 110);
-  font-size: 1.125rem;
+  font-size: 23px;
   font-weight: 700;
-  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
     padding-left: 35px;
+    font-size: 1.125rem;
   }
-
 `;
 
 const Payment = styled.div`
@@ -774,16 +757,14 @@ const Payment = styled.div`
 const Grid = styled.div``;
 
 const ConfGrid = styled.div`
-     display: grid;
-     grid-template-columns: auto auto;
-     grid-column-gap: 0;
-     justify-items: stretch;
-     gap: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 0;
+  justify-items: stretch;
+  gap: 20px;
 
-
-    @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
-
-      margin-right: 10px;
-      margin-left: 10px;
-    }
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 `;
