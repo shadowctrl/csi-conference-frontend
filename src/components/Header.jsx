@@ -192,7 +192,6 @@ const Header = () => {
           <GrClose size={25} />
         </button>
         <img src="/images/csi-broch1.png" />
-        {/* <img src='/images/csi-broch2' /> */}
       </Popup>
     </HeaderC>
   );

@@ -7,10 +7,14 @@ import ChiefPatronsA from "./ChiefPatronsA";
 import ChiefPatronsB from "./ChiefPatronsB";
 import { chiefPatobj, confChairsobj, confConvpbj } from "../Objects/details";
 import ConfChairs from "./ConfChairs";
+import Popup from "./Popup";
+// GrClose
 // import ChiefPatronsB from "./chiefPatrons"
 import Info from "./Info";
 import ScrollToTop from "react-scroll-to-top";
+import { GrClose } from "react-icons/gr";
 const Hero = () => {
+  const [buttonPopup, setButtonPopup] = useState(true);
   let ChfPat = 0;
   let ConfChr = 0;
 
@@ -682,6 +686,12 @@ const Hero = () => {
       <div>
         <Aboutus />
       </div>
+      <Popup trigger={buttonPopup}>
+        <button onClick={() => setButtonPopup(false)}>
+          <GrClose size={25} />
+        </button>
+        <img src="/images/csi-broch1.png" />
+      </Popup>
     </div>
   );
 };
