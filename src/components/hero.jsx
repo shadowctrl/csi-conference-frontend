@@ -682,9 +682,6 @@ const Hero = () => {
       <div>
         <Aboutus />
       </div>
-      <div>
-        <Info />
-      </div>
     </div>
   );
 };
