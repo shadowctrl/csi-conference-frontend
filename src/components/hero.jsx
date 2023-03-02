@@ -3,28 +3,18 @@ import styled from "styled-components";
 import "./hero.css";
 import Aboutus from "./aboutus";
 import Header from "./Header";
-import { FaRupeeSign } from "react-icons/fa";
-import { FaDollarSign } from "react-icons/fa";
 import ChiefPatronsA from "./ChiefPatronsA";
 import ChiefPatronsB from "./ChiefPatronsB";
 import { chiefPatobj, confChairsobj, confConvpbj } from "../Objects/details";
 import ConfChairs from "./ConfChairs";
 // import ChiefPatronsB from "./chiefPatrons"
-
 import Info from "./Info";
-// const handleBurgerStatus = () => {
-//   <Header key={this.state.id} />;
-// };
-
+import ScrollToTop from "react-scroll-to-top";
 const Hero = () => {
   let ChfPat = 0;
   let ConfChr = 0;
 
   const [burgerStatus, setBurgerStatus] = useState(false);
-  const handleBurgerStatus = () => {
-    setBurgerStatus((e) => !e);
-    <Header value={burgerStatus} />;
-  };
   useEffect(() => {
     const options = {
       root: null,
@@ -63,7 +53,8 @@ const Hero = () => {
   };
 
   return (
-    <div onClick={() => handleBurgerStatus}>
+    <div>
+      <ScrollToTop smooth color="#0c4a6e" width="37" height="20" />
       <Main className="mt-10 text-center">
         <Title className="font-poppins text-center text-sky-600 text-md px-5 md:text-xl font-extrabold">
           International Conference on Next-Gen Technologies in Computational
@@ -729,7 +720,7 @@ const Ul = styled.div`
 const CommiteeTitle = styled.div`
   margin-top: 20px;
 
-  color: rgb(12, 74, 110);
+  color: #0c4a6e;
   font-size: 23px;
   font-weight: 700;
   @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
