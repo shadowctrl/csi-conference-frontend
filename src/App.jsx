@@ -11,12 +11,7 @@ import ChiefGuest from "./components/chiefGuest";
 /*               LAYOUTS               */
 import RootLayout from "./Layouts/RootLayout";
 
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import Popups from './components/Popups';
 // const router = cre
 // const router = createBrowserRouter (

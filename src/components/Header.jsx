@@ -55,7 +55,7 @@ const Header = () => {
       <BottomNav style={{ color: "#f5f5f5" }}>
         <li>
           <AiFillHome size={`25`} />
-          <a href="#">
+          <a href="/">
             <button onClick={() => setButtonPopup(true)}>Home</button>
           </a>
         </li>
@@ -112,7 +112,7 @@ const Header = () => {
           <li>
             <MenuWrap>
               <AiFillHome size={25} />
-              <a href="#">
+              <a href="/">
                 <button onClick={() => setButtonPopup(true)}>Home</button>
               </a>
             </MenuWrap>
