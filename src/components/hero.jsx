@@ -58,7 +58,14 @@ const Hero = () => {
 
   return (
     <div>
-      <ScrollToTop smooth color="#0c4a6e" width="37" height="20" />
+      <ScrollToTop
+        smooth
+        // color="#0c4a6e"
+        // svgPath=""
+        width="38"
+        height="20"
+        style={{ backgroundColor: "#bfe4f2" }}
+      />
       <Main className="mt-10 text-center">
         <Title className="font-poppins text-center text-sky-600 text-md px-5 md:text-xl font-extrabold">
           International Conference on Next-Gen Technologies in Computational
