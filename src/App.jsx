@@ -1,30 +1,6 @@
 import "./App.css";
-/*              COMPONENTS              */
-import Header from "./components/Header";
-import Hero from "./components/hero";
-// import ChiefGuest from "./components/chiefGuest";
-// import chief from "./components/chief";
-import Info from "./components/Info";
-// import Aboutus from "./components/aboutus";
-import ChiefGuest from "./components/chiefGuest";
-
-/*               LAYOUTS               */
-import RootLayout from "./Layouts/RootLayout";
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-// import Popups from './components/Popups';
-// const router = cre
-// const router = createBrowserRouter (
-//                createRoutesFromElements(
-
-//                 <Route path='/' element={<RootLayout/>}>
-
-//                     <Route index element={<Hero/>} />
-//                     <Route path='chiefGuest' element={<ChiefGuest/>} />
-//                 </Route>
-
-//                )
-//               )
+import { Header, Hero, Info, ChiefGuest, Souvenir } from "./components/index";
 
 function App() {
   return (
@@ -34,7 +10,8 @@ function App() {
         <Route
           path="chiefGuest"
           element={[<Header />, <ChiefGuest />, <Info />]}
-        ></Route>
+        />
+        <Route path="souvenir" element={[<Souvenir />]} />
       </Routes>
     </BrowserRouter>
     // <div className="">
