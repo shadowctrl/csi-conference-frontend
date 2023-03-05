@@ -56,7 +56,8 @@ const souvenir = () => {
 export default souvenir;
 
 const Main = styled.div`
-  padding: 100px;
+  margin-right: 10px;
+  margin-left: 10px;
   h1 {
     /* margin-top: 50px; */
     color: #0c4a6e;
@@ -64,15 +65,14 @@ const Main = styled.div`
     font-weight: 600;
     font-style: italic;
     font-size: x-large;
-    /* scroll-snap-align: start;
-    height: 100vh; */
+    /* scroll-snap-align: start; */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     box-shadow: 2px 2px 20px 2px;
-    height: 90vh;
-    padding: 10px;
+    /* padding: 10px; */
     text-shadow: 10px 10px 20px;
   }
 `;
@@ -82,13 +82,14 @@ const H1 = styled.div`
   color: brown;
   text-align: center;
   font-weight: 900;
-  padding: 10px;
+  padding: 15px;
   box-shadow: 2px 2px 20px 2px;
   animation: fadey 1s linear forwards;
-  height: 90vh;
+  height: 97vh;
   display: flex;
   align-items: center;
   text-shadow: 10px 10px 10px;
+
   @keyframes fadey {
     0% {
       transform: translateY(10px);
@@ -104,11 +105,9 @@ const H1 = styled.div`
 const Border = styled.div`
   border-style: dashed;
   border-color: rgb(147 197 253);
-  padding-top: 1rem;
+  padding-top: 10px;
   border-width: 0px;
   scroll-snap-align: start;
-  margin-top: 20px;
-  margin-bottom: 20px;
 `;
 
 const Details = styled.div`
