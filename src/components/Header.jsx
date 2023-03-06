@@ -33,7 +33,7 @@ const Header = ({ value }) => {
   console.log(value);
   const [burgerStatus, setBurgerStatus] = useState(false);
   return (
-    <HeaderC className="bg-slate-700 py-7 md:py-0">
+    <HeaderC className="bg-slate-700 py-7 pb-10 md:py-0">
       <TopNav className="">
         <Logo className="">
           <a href="/">
@@ -98,7 +98,7 @@ const Header = ({ value }) => {
       </BottomNav>
       <BottomNavPh>
         <Button onClick={() => setBurgerStatus(true)}>
-          <GiHamburgerMenu size={25} />
+          <GiHamburgerMenu size={30} />
         </Button>
         {/* <button onClick={ () => setBurgerStatus(true)}>
           <GiHamburgerMenu size={25} />
@@ -356,7 +356,9 @@ const Button = styled.button`
   cursor: pointer;
   z-index: 0;
   color: #f5f5f5;
-  margin-right: 2px;
+  margin-top: 0px;
+  margin-right: 7px;
+  
   /* padding-bottom: 2px; */
 `;
 

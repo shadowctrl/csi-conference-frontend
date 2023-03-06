@@ -68,7 +68,7 @@ const Hero = () => {
   return (
     <div onClick={() => handleBurgerStatus}>
       <Main className="mt-10 text-center">
-        <Title className="font-poppins text-center text-sky-600 text-sm md:text-xl font-extrabold">
+        <Title className="font-poppins text-center text-sky-600 text-md px-5 md:text-xl font-extrabold">
           International Conference on Next-Gen Technologies in Computational
           Intelligence (NGTCA 2023)
           <br />{" "}
