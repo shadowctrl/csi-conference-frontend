@@ -11,7 +11,7 @@ const souvenir = () => {
       <Main className="">
         <Border> </Border>
         <H1>
-          Here is an unbeatable opportunity to elevate the visibility and image
+          Here is an unbeatable opportunity to elevate~ the visibility and image
           of your organization!
         </H1>
         <Border></Border>
