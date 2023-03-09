@@ -10,6 +10,7 @@
   overflow-y: scroll;
   width: 100vw;
   height: 100vh;
+
 }
 .App {
   text-align: center;
@@ -57,3 +58,4 @@
     #14101d 95.11%
   );
 }
+//42
