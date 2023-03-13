@@ -8,14 +8,14 @@ const souvenir = () => {
       <div className="snap-start">
         <Header />
       </div>
-      <Main className="">
+      <Main>
         <Border> </Border>
         <H1>
-          Here is an unbeatable opportunity to elevate~ the visibility and image
+          Here is an unbeatable opportunity to elevate the visibility and image
           of your organization!
         </H1>
         <Border></Border>
-        <h1 className="snap-start">
+        <h1 className="">
           The International Conference NGTCA 2023 intends to bring out a
           Souvenir to commemorate the occasion. The Souvenir is expected to be
           circulated to a wide spectrum of audience from all the nine Region 7
@@ -26,25 +26,36 @@ const souvenir = () => {
           of various premier government bodies and students.
         </h1>
         <Border></Border>
-        <Details className="snap-start flex-col">
-          <span className="text-3xl">
+        <Details className=" flex-col justify-center items-center">
+          <span className="text-3xl flex justify-center items-center">
             {" "}
-            The nominal rates for advertising in the Souvenir are as follows:{" "}
+            The nominal rates for advertising in the Souvenir
           </span>
-          <div className="mt-[20px] grid grid-flow-row grid-cols-2 rounded-3xl p-6 gap-x-20 ">
-            <div className="text-left">
-              {" "}
-              <img
-                src="/images/frontpage.jpg"
-                className="w-[20vh] h-[30vh] rounded-xl ml-[40px]"
-              />
-              <span className=" text-red-600"> Inside Front Cover </span>
+          <div className="mt-[40px] grid grid-flow-row grid-cols-2 rounded-3xl p-6 gap-x-16 gap-y-16 shadow-2xl shadow-slate-500">
+            <div className="flex justify-center items-center ">
+              Inside Front Cover{" "}
             </div>
-            <div> Rs.20000</div>
-            <div> Back Cover</div>
-            <div> Rs. 15000</div>
-            <div> Full Page </div>
-            <div> Rs.8000 </div>
+
+            <div className="flex justify-center items-center text-red-600">
+              {" "}
+              Rs.20000
+            </div>
+            <div className="flex justify-center items-center "> Back Cover</div>
+            <div className="flex items-center justify-center text-red-600  ">
+              Rs.15000
+            </div>
+
+            <div className="flex justify-center items-center text-2xl">
+              {" "}
+              Inside Back Cover{" "}
+            </div>
+            <div className="flex items-center justify-center text-red-600  ">
+              Rs.10000
+            </div>
+            <div className="flex justify-center items-center "> Full Page</div>
+            <div className="flex items-center justify-center text-red-600  ">
+              Rs.8000
+            </div>
           </div>
         </Details>
         <Border />
@@ -67,13 +78,13 @@ const Main = styled.div`
     font-style: italic;
     font-size: x-large;
     /* scroll-snap-align: start; */
-    height: 100vh;
+    height: 97vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     box-shadow: 2px 2px 20px 2px;
-    /* padding: 10px; */
+    padding: 50px;
     text-shadow: 10px 10px 20px;
   }
 `;
@@ -109,6 +120,7 @@ const Border = styled.div`
   padding-top: 10px;
   border-width: 0px;
   scroll-snap-align: start;
+  margin-top: 50px;
 `;
 
 const Details = styled.div`
@@ -118,9 +130,9 @@ const Details = styled.div`
   font-style: italic;
   font-size: x-large;
   box-shadow: 2px 2px 20px 2px;
-  height: 90vh;
-  padding: 10px;
+  height: 97vh;
+  padding: 20px;
   text-shadow: 10px 10px 20px;
-  padding-left: 50px;
-  padding-top: 30px;
+  /* padding-left: 20px; */
+  padding-top: 40px;
 `;
