@@ -26,7 +26,7 @@ const souvenir = () => {
           of various premier government bodies and students.
         </h1>
         <Border></Border>
-        <Details className=" flex-col justify-center items-center">
+        <Details className=" flex-row justify-center items-center ">
           <span className="text-3xl flex justify-center items-center">
             {" "}
             The nominal rates for advertising in the Souvenir
@@ -134,5 +134,5 @@ const Details = styled.div`
   padding: 20px;
   text-shadow: 10px 10px 20px;
   /* padding-left: 20px; */
-  padding-top: 40px;
+  /* padding-top: 40px; */
 `;
