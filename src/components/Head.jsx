@@ -27,7 +27,12 @@ const Head = () => {
 
   const [buttonPopup, setButtonPopup] = useState(false);
   const [iconSize, setIconSize] = useState(20);
-  const [burgerStatus, setBurgerStatus] = useState(false)
+  const [burgerStatus, setBurgerStatus] = useState(false);
+  const [more, setMore] = useState(false);
+
+  const Morefun = () => {
+    more ? setMore(false) : setMore(true)
+  }
   return (
 
     <HeaderC>
@@ -54,7 +59,7 @@ const Head = () => {
 
       </TopNav>
 
-      <BottomNav>
+      <MiddleNav>
         <Ul>
           <li>
             <AiFillHome size={iconSize} />
@@ -80,37 +85,30 @@ const Head = () => {
             <CgNotes size={iconSize} />
             <a href="/#r">Registrations</a>
           </li>
-        
-          <li>
-                <FcAbout size={iconSize} />
-                <a href="/#au">About Us</a>
+
+          <li onClick={() => Morefun()}>
+            <a href="#">More</a>
+            <DownAr show={more}>
+              <AiFillCaretDown size={20} />
+            </DownAr>
+            <UpAr show={more}>
+              <AiFillCaretUp size={20} />
+            </UpAr>
+          </li>
+          {/* <li>
+            <FcAbout size={iconSize} />
+            <a href="/#au">About Us</a>
           </li>
 
           <li>
-                <BiBody size={iconSize} />
-                <a href="/#ob">Organising body</a>
-              </li>
-
-              <li>
-                <MdOutlineGroupAdd size={iconSize} />
-                <a href="/#cm">Committee members</a>
-              </li>
-          {/* <MoreButton>
-            <div>
-              <span>More</span>
-              <DownAr>
-                <AiFillCaretDown size={27} />
-              </DownAr>
-              <UpAr>
-                <AiFillCaretUp size={27} />
-              </UpAr>
-            </div>
-            <More>
-           
-
-         
-            </More>
-          </MoreButton> */}
+            <BiBody size={iconSize} />
+            <a href="/#ob">Organising body</a>
+          </li>
+          
+          <li>
+            <MdOutlineGroupAdd size={iconSize} />
+            <a href="/#cm">Committee members</a>
+          </li> */}
 
         </Ul>
 
@@ -207,17 +205,50 @@ const Head = () => {
 
 
         </BurgerNav>
-      </BottomNav>
+      </MiddleNav>
+      <BottomNav show={more}>
+        <More 
+          show={more}
+         
+        >
+          <li  className="bg-gray-gradient">
+            <span>
+            <FcAbout size={iconSize} />
+            <a href="/#au">About Us</a>
+            </span>
+          </li >
 
+          <li  className="bg-gray-gradient">
+            <span>
+            <BiBody size={iconSize} />
+            <a href="/#ob">Organising body</a>
+            </span>
+          </li>
+
+          <li  className="bg-gray-gradient">
+            <span>
+            <MdOutlineGroupAdd size={iconSize} />
+            <a href="/#cm">Committee members</a>
+            </span>
+          </li>
+        </More>
+      </BottomNav>
     </HeaderC>
+
+
   )
 }
 
 export default Head
 
+
+
+
 const HeaderC = styled.div`
-    height: 28vh;
-    width: 100vw;
+    /* height: 48vh; */
+    width: 100%;
+    position: relative;
+    /* z-index: 5; */
     background-color: rgb(51, 65, 85);
 
     @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {}
@@ -230,16 +261,20 @@ const HeaderC = styled.div`
 
 const TopNav = styled.div`
     width: 100%;
-    height: 65%;
-    background-color: black;
+    height: 19.5vh;
+    /* position: absolute; */
+    /* top: 0; */
+    z-index: 3;
+    /* background-color: black; */
     display: flex;
     align-items: center;
     justify-content: center;
+    
     gap: 30px;
     
     img{
-      width:120px;
-      height: 120px;
+      /* width:120px;
+      height: 120px; */
       width: 7.2vw;
       height: 7.2vw;
     }
@@ -262,8 +297,8 @@ const Heading = styled.div`
       font-size: 1.3vw;
       font-weight: 600;
     }
-
-    @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {}
+ @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {}
+   
     @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {}
 
 `;
@@ -271,9 +306,10 @@ const Heading = styled.div`
 
 
 
-const BottomNav = styled.div`
-    height: 35%;
+const MiddleNav = styled.div`
+    height: 8.5vh;
     display: flex;
+    
     /* align-items: center; */
     /* position: sticky; */
     /* padding: 0 20px; */
@@ -289,14 +325,17 @@ const BottomNav = styled.div`
 `;
 const Ul = styled.div`
     height: 100%;
-    width: 100vw;
-    background-color: brown;
+    width: 100%;
+    /* background-color: pink; */
     display: flex;
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
+    
     justify-content: space-between;
-    padding: 0 6vw;
+   
+   
+    padding: 0 13vw;
 
 
     li{
@@ -305,12 +344,14 @@ const Ul = styled.div`
       flex-wrap: nowrap;
       list-style: none;
       align-items: center;
+      justify-content: center;
+      
       gap: 7px;
       color: #f5f5f5;
 
       a{
         color: rgba(189, 230, 253, 1);
-        font-size: 0.95vw;
+        font-size: 1.1vw;
         font-weight: 700;
       }
 
@@ -361,14 +402,14 @@ const BurgerNav = styled.div`
       
       height: 50vh;
       width: 70vh;
-      position: fixed;
+      position: absolute;
       right: 0;
       display: flex;
       flex-direction: column;
-      background-color: yellow;
+      /* background-color: yellow; */
       border-radius: 20px;
       width: 25vw;
-      transform: ${(props) => (props.show ? "translate(0)" : "translate(100%)")};
+      transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
       transition: transform 0.5s;
       /* display: ${(props) => (props.show ? "" : "none")}; */
       /* justify-content: center; */
@@ -400,39 +441,64 @@ const MenuWrap = styled.div`
     }
 `;
 
-// const MoreButton = styled.div`
+const DownAr = styled.div`
+  display: ${(props) => (props.show ? "none" : "")};
+`;
 
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//       margin-top: 13vw;
-//       height: 30vh;
-//       width: 19vw;
-//       background-color: pink;
-//       div{
-//         display: flex;
-//         margin-bottom: 0.7vw;
-//       }
+const UpAr = styled.div`
+   display: ${(props) => (props.show ? "" : "none")};
+`;
 
-//       z-index: 1;
-//       /* align-items: center; */
-//       /* gap: 5px; */
-// `;
+const BottomNav = styled.div`
+    width: 100%;
+    height: 20vh;
+    position: absolute;
+    top: 28vh;
+    z-index: 1;
+    /* background-color: pink; */
+    transform : ${(props) => (props.show ? "translateY(0)" : "translateY(-300%)")};
+    transition: transform 0.5s;
+`;
+const More = styled.div`
+    height: 20vh;
+    width: 16vw;
+    /* z-index: 1; */
+    /* transform : ${(props) => (props.show ? "translateY(0)" : "translateY(-100%)")}; */
+    /* transition: 0.5s; */
+    /* background-color: yellow; */
+    margin-left: 75.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.07vw;
+    /* box-shadow: 0px 3px 16px 7px; */
+    /* opacity: 0.2; */
+    /* padding: 0.5vh 1.9vw; */
+    border-radius: 8%;
+    
+    /* align-items: center; */
+    
 
-// const DownAr = styled.div`
-// `;
+    /* display: ${(props) => (props.show ? "translateY(0)" : "translateX(100%)")}; */
 
-// const UpAr = styled.div`
-// `;
+    li{
+        display: flex;
+        margin: 0 0vw;
+        font-size: 1vw;
+        color: #f5f5f5;
+        border-bottom: 1px solid #f5f5f5;
+        list-style-type: none;
+        /* margin-bottom: 1vw; */
+        font-weight: 600;
+        padding: 0.3vw 0.9vw;
+        box-shadow: 10px 8px 16px 4px;
+        border-radius: 10px ;
+        /* opacity: 0.9; */
 
-// const More = styled.div`
+      span{
+        display: flex;
+        gap: 1vw;
+        margin-bottom: 1vw;
+      }
+    }
 
-//       display: flex;
-//       width: 100%;
-//       flex-direction: column;
-//       background-color: red;
-//       padding: 0 1vw;
-//       gap: 1.5vw;
-//       /* gap: ; */
-// `;
-
+`;

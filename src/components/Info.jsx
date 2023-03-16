@@ -18,6 +18,7 @@ const InfoC = styled.div`
   /* position: relative;
   bottom: 0; */
   /* flex-direction: column; */
+  margin-top: auto;
   align-items: center;
   justify-content: center;
   width: 100vw;

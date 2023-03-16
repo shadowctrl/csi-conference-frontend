@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: mars;
+  src: url(/public/fonts/mars/Mars.ttf);
+}
+
+.scroll-lock{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  width: 100vw;
+  height: 100vh;
+}
 .App {
   text-align: center;
 }

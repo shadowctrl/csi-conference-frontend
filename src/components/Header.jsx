@@ -27,10 +27,9 @@ import { Outlet } from "react-router-dom";
 
 // import Popup from './components/Popup';
 
-const Header = ({ value }) => {
+const Header = () => {
   // const [modalShow, setModalShow] = React.useState(false);
   const [buttonPopup, setButtonPopup] = useState(false);
-  console.log(value);
   const [burgerStatus, setBurgerStatus] = useState(false);
   return (
     <HeaderC className="bg-slate-700 py-7 pb-10 md:py-0">
@@ -56,7 +55,7 @@ const Header = ({ value }) => {
       <BottomNav style={{ color: "#f5f5f5" }}>
         <li>
           <AiFillHome size={`25`} />
-          <a href="#">
+          <a href="/">
             <button onClick={() => setButtonPopup(true)}>Home</button>
           </a>
         </li>
@@ -88,7 +87,7 @@ const Header = ({ value }) => {
         <li>
           {/* <FcAbout size={25} /> */}
           <CgNotes size={25} />
-          <a href="http://localhost:3333/#r">Registrations</a>
+          <a href="/#r">Registrations</a>
         </li>
 
         <li>
@@ -113,7 +112,7 @@ const Header = ({ value }) => {
           <li>
             <MenuWrap>
               <AiFillHome size={25} />
-              <a href="#">
+              <a href="/">
                 <button onClick={() => setButtonPopup(true)}>Home</button>
               </a>
             </MenuWrap>
@@ -171,7 +170,7 @@ const Header = ({ value }) => {
           <li>
             <MenuWrap>
               <CgNotes size={25} />
-              <a href="http://localhost:3333/#r">
+              <a href="/#r">
                 <button onClick={() => setBurgerStatus(false)}>
                   Registrations
                 </button>
@@ -193,7 +192,6 @@ const Header = ({ value }) => {
           <GrClose size={25} />
         </button>
         <img src="/images/csi-broch1.png" />
-        {/* <img src='/images/csi-broch2' /> */}
       </Popup>
     </HeaderC>
   );
@@ -249,7 +247,6 @@ const Logo = styled.div`
   margin: 10px 20px;
   transform: scaleX(-1);
 
-  
   @media (max-width: 1060px) {
     margin: 0;
     padding: 0;
@@ -358,7 +355,7 @@ const Button = styled.button`
   color: #f5f5f5;
   margin-top: 0px;
   margin-right: 7px;
-  
+
   /* padding-bottom: 2px; */
 `;
 

@@ -3,28 +3,22 @@ import styled from "styled-components";
 import "./hero.css";
 import Aboutus from "./aboutus";
 import Header from "./Header";
-import { FaRupeeSign } from "react-icons/fa";
-import { FaDollarSign } from "react-icons/fa";
 import ChiefPatronsA from "./ChiefPatronsA";
 import ChiefPatronsB from "./ChiefPatronsB";
-import { chiefPatobj,confChairsobj, confConvpbj } from "../Objects/details";
+import { chiefPatobj, confChairsobj, confConvpbj } from "../Objects/details";
 import ConfChairs from "./ConfChairs";
+import Popup from "./Popup";
+// GrClose
 // import ChiefPatronsB from "./chiefPatrons"
-
 import Info from "./Info";
-// const handleBurgerStatus = () => {
-//   <Header key={this.state.id} />;
-// };
-
+import ScrollToTop from "react-scroll-to-top";
+import { GrClose } from "react-icons/gr";
 const Hero = () => {
+  const [buttonPopup, setButtonPopup] = useState(true);
   let ChfPat = 0;
   let ConfChr = 0;
 
   const [burgerStatus, setBurgerStatus] = useState(false);
-  const handleBurgerStatus = () => {
-    setBurgerStatus((e) => !e);
-    <Header value={burgerStatus} />;
-  };
   useEffect(() => {
     const options = {
       root: null,
@@ -54,19 +48,24 @@ const Hero = () => {
   });
 
   let Rend = () => {
-
-    ChfPat+=1;
-    if (ChfPat % 2 ==0){
+    ChfPat += 1;
+    if (ChfPat % 2 == 0) {
       return 0;
-    }
-    else {
+    } else {
       return 1;
     }
-    
-  }
+  };
 
   return (
-    <div onClick={() => handleBurgerStatus}>
+    <div >
+      <ScrollToTop
+        smooth
+        // color="#0c4a6e"
+        // svgPath=""
+        width="38"
+        height="20"
+        style={{ backgroundColor: "#bfe4f2" }}
+      />
       <Main className="mt-10 text-center">
         <Title className="font-poppins text-center text-sky-600 text-md px-5 md:text-xl font-extrabold">
           International Conference on Next-Gen Technologies in Computational
@@ -172,7 +171,7 @@ const Hero = () => {
 
             <Para1 className="antialiased text-left mt-8">
               <div className="a opacity-0">
-                <CommiteeTitle className="">Chief Patrons: </CommiteeTitle>
+                <CommiteeTitle className="">Chief Patrons</CommiteeTitle>
 
                 {/* <Ul className="">
                   <li>
@@ -192,29 +191,21 @@ const Hero = () => {
                     Hindu{" "}
                   </li>
                 </Ul> */}
-                { chiefPatobj.map(member => (
-                   
-                    Rend() ? (
-                      <ChiefPatronsA 
-                        name = {member.name}
-                        about = {member.about}
-                        img = {member.img}
-                      />
-                    )  : (
-                      <ChiefPatronsB
-                      name = {member.name}
-                      about = {member.about}
-                      img = {member.img}
+                {chiefPatobj.map((member) =>
+                  Rend() ? (
+                    <ChiefPatronsA
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
                     />
-                    )
-                ))
-                  
-                }
-
-                
-          
-             
-                
+                  ) : (
+                    <ChiefPatronsB
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
+                    />
+                  )
+                )}
               </div>
               <div className="cc">
                 <CommiteeTitle>Conference Chair(s) </CommiteeTitle>
@@ -232,20 +223,15 @@ const Hero = () => {
                   </li>
                 </Ul> */}
                 <ConfGrid>
-
-          
-                { confChairsobj.map(member => (
+                  {confChairsobj.map((member) => (
                     <ConfChairs
-                      name = {member.name}
-                      about = {member.about}
-                      img = {member.img}
-                      position = {member.position}
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
+                      position={member.position}
                     />
-                ))
-                }
-
-              </ConfGrid>
-
+                  ))}
+                </ConfGrid>
               </div>
 
               <div className="c opacity-0">
@@ -254,15 +240,14 @@ const Hero = () => {
                 </CommiteeTitle>
 
                 <ConfGrid>
-                { confConvpbj.map(member => (
-                  <ConfChairs  
-                  name = {member.name}
-                  about = {member.about}
-                  img = {member.img}
-                  position = {member.position}
-                  />
-                ))}
-
+                  {confConvpbj.map((member) => (
+                    <ConfChairs
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
+                      position={member.position}
+                    />
+                  ))}
                 </ConfGrid>
 
                 {/* <Ul className="">
@@ -708,16 +693,21 @@ const Hero = () => {
       <div>
         <Aboutus />
       </div>
-      <div>
-        <Info />
-      </div>
+      <Popup trigger={buttonPopup}>
+        <button onClick={() => setButtonPopup(false)}>
+          <GrClose size={25} />
+        </button>
+        <img src="/images/csi-broch1.png" />
+      </Popup>
     </div>
   );
 };
 
 export default Hero;
 
-const Main = styled.div``;
+const Main = styled.div`
+  /* z-index: -1; */
+`;
 const Title = styled.div``;
 const Border = styled.div`
   // border-style: double;
@@ -746,13 +736,13 @@ const Ul = styled.div`
 const CommiteeTitle = styled.div`
   margin-top: 20px;
 
-  color: rgb(12, 74, 110);
-  font-size: 1.125rem;
+  color: #0c4a6e;
+  font-size: 23px;
   font-weight: 700;
-  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
     padding-left: 35px;
+    font-size: 1.125rem;
   }
-
 `;
 
 const Payment = styled.div`
@@ -774,16 +764,14 @@ const Payment = styled.div`
 const Grid = styled.div``;
 
 const ConfGrid = styled.div`
-     display: grid;
-     grid-template-columns: auto auto;
-     grid-column-gap: 0;
-     justify-items: stretch;
-     gap: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 0;
+  justify-items: stretch;
+  gap: 20px;
 
-
-    @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
-
-      margin-right: 10px;
-      margin-left: 10px;
-    }
+  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 `;
