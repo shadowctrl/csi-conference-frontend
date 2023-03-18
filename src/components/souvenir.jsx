@@ -23,9 +23,7 @@ const souvenir = () => {
     };
     const observer = new IntersectionObserver(callback, options);
 
-    const divs = document.querySelectorAll(
-      `div.H1,h1.h1, div.grid,span.grid_head`
-    );
+    const divs = document.querySelectorAll(`div.H1, div.grid,span.grid_head`);
 
     divs.forEach((div) => {
       observer.observe(div);
@@ -44,8 +42,8 @@ const souvenir = () => {
           of your organization!
         </H1>
         <Border></Border>
-        <h1 className="h1">
-          <img src="/images/up.svg" className="absolute w-[100%] h-[50%]"></img>
+        <H2 className="p2">
+          {/* <img src="/images/up.svg" className="absolute w-[100%] h-[50%]"></img> */}
           The International Conference NGTCA 2023 intends to bring out a
           Souvenir to commemorate the occasion. The Souvenir is expected to be
           circulated to a wide spectrum of audience from all the nine Region 7
@@ -55,7 +53,7 @@ const souvenir = () => {
           covers a diverse profile of academicians, research scholars, industry
           professionals, officers of various premier government bodies and
           students.
-        </h1>
+        </H2>
         <Border></Border>
         <Details className=" flex-row justify-center items-center ">
           <div className="md:mt-[100px]">
@@ -109,25 +107,6 @@ export default souvenir;
 const Main = styled.div`
   margin-right: 10px;
   margin-left: 10px;
-  h1 {
-    /* margin-top: 50px; */
-    color: #0c4a6e;
-    font-family: poppins;
-    font-weight: 600;
-    font-style: italic;
-    font-size: x-large;
-    /* scroll-snap-align: start; */
-    height: 97vh;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    text-align: left;
-    box-shadow: 2px 2px 20px 2px;
-    text-align: justify;
-    /* padding: 50px; */
-    padding: 0 200px;
-    text-shadow: 10px 10px 20px;
-  }
 `;
 const H1 = styled.div`
   font-family: "mars";
@@ -153,6 +132,25 @@ const H1 = styled.div`
       opacity: 100%;
     }
   }
+`;
+
+const H2 = styled.div`
+  color: #0c4a6e;
+  font-family: poppins;
+  font-weight: 600;
+  font-style: italic;
+  font-size: x-large;
+  /* scroll-snap-align: start; */
+  height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  box-shadow: 2px 2px 20px 2px;
+  text-align: justify;
+  /* padding: 50px; */
+  padding: 0px 200px;
+  text-shadow: 10px 10px 20px;
 `;
 
 const Border = styled.div`
