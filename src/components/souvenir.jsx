@@ -23,7 +23,7 @@ const souvenir = () => {
     };
     const observer = new IntersectionObserver(callback, options);
 
-    const divs = document.querySelectorAll(`div.H1, div.grid,span.grid_head`);
+    const divs = document.querySelectorAll(`div.grid,span.grid_head`);
 
     divs.forEach((div) => {
       observer.observe(div);
@@ -40,20 +40,22 @@ const souvenir = () => {
         <H1 className="H1">
           Here is an unbeatable opportunity to elevate the visibility and image
           of your organization!
-        </H1>
-        <Border></Border>
-        <H2 className="p2">
+          {/* <H2 className="p2"> */}
           {/* <img src="/images/up.svg" className="absolute w-[100%] h-[50%]"></img> */}
-          The International Conference NGTCA 2023 intends to bring out a
-          Souvenir to commemorate the occasion. The Souvenir is expected to be
-          circulated to a wide spectrum of audience from all the nine Region 7
-          Chapters of Chennai, Kancheepuram, Trivandrum, Sivakasi, Coimbatore,
-          Trichy, Vellore, Salem and Cochin and all the Student Branches
-          associated with them. The audience is expected to exceed 3000 and
-          covers a diverse profile of academicians, research scholars, industry
-          professionals, officers of various premier government bodies and
-          students.
-        </H2>
+          <span>
+            {" "}
+            The International Conference NGTCA 2023 intends to bring out a
+            Souvenir to commemorate the occasion. The Souvenir is expected to be
+            circulated to a wide spectrum of audience from all the nine Region 7
+            Chapters of Chennai, Kancheepuram, Trivandrum, Sivakasi, Coimbatore,
+            Trichy, Vellore, Salem and Cochin and all the Student Branches
+            associated with them. The audience is expected to exceed 3000 and
+            covers a diverse profile of academicians, research scholars,
+            industry professionals, officers of various premier government
+            bodies and students.
+          </span>
+          {/* </H2> */}
+        </H1>
         <Border></Border>
         <Details className=" flex-row justify-center items-center ">
           <div className="md:mt-[100px]">
@@ -61,7 +63,7 @@ const souvenir = () => {
               {" "}
               The nominal rates for advertising in the Souvenir
             </span>
-            <Grid className="zoomin mt-[40px] grid grid-flow-row grid-cols-2 rounded-3xl p-6 gap-x-16 gap-y-16 ">
+            <Grid className="zoomin mt-[40px] grid grid-flow-row grid-cols-2 rounded-3xl p-8 gap-y-16 md:ml-[200px] md:mr-[200px] ">
               <div className="flex justify-center items-center ">
                 Inside Front Cover{" "}
               </div>
@@ -70,13 +72,6 @@ const souvenir = () => {
                 {" "}
                 Rs.20000
               </div>
-              <div className="flex justify-center items-center ">
-                {" "}
-                Back Cover
-              </div>
-              <div className="flex items-center justify-center text-red-600  ">
-                Rs.15000
-              </div>
 
               <div className="flex justify-center items-center text-2xl">
                 {" "}
@@ -84,6 +79,13 @@ const souvenir = () => {
               </div>
               <div className="flex items-center justify-center text-red-600  ">
                 Rs.10000
+              </div>
+              <div className="flex justify-center items-center ">
+                {" "}
+                Back Cover
+              </div>
+              <div className="flex items-center justify-center text-red-600  ">
+                Rs.15000
               </div>
               <div className="flex justify-center items-center ">
                 {" "}
@@ -114,17 +116,21 @@ const H1 = styled.div`
   color: brown;
   text-align: center;
   font-weight: 900;
-  padding: 15px;
+  padding: 0px 40px;
   box-shadow: 2px 2px 20px 2px;
-  animation: fadey 1s linear forwards;
+  animation: fadey 2s linear forwards;
   height: 97vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 80px;
   text-shadow: 10px 10px 10px;
+  margin: 0px 0px 20px 0px;
 
   @keyframes fadey {
     0% {
-      transform: translateY(10px);
+      transform: translateY(20px);
       opacity: 0;
     }
     100% {
@@ -132,26 +138,40 @@ const H1 = styled.div`
       opacity: 100%;
     }
   }
+
+  span {
+    font-family: "poppins";
+    font-size: x-large;
+    color: #0c4a6e;
+    text-align: justify;
+    font-weight: 450;
+    padding: 15px;
+    box-shadow: 0px 2px 30px slategray;
+    border-radius: 10px;
+    text-shadow: 0px 0px 0px;
+    padding: 25px;
+    animation: fadey 2s linear forwards;
+  }
 `;
 
-const H2 = styled.div`
-  color: #0c4a6e;
-  font-family: poppins;
-  font-weight: 600;
-  font-style: italic;
-  font-size: x-large;
-  /* scroll-snap-align: start; */
-  height: 97vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-  box-shadow: 2px 2px 20px 2px;
-  text-align: justify;
-  /* padding: 50px; */
-  padding: 0px 200px;
-  text-shadow: 10px 10px 20px;
-`;
+// const H2 = styled.div`
+//   color: #0c4a6e;
+//   font-family: poppins;
+//   font-weight: 600;
+//   font-style: italic;
+//   font-size: x-large;
+//   /* scroll-snap-align: start; */
+//   height: 97vh;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: justify;
+//   box-shadow: 2px 2px 20px 2px;
+//   text-align: justify;
+//   /* padding: 50px; */
+//   padding: 0px 200px;
+//   text-shadow: 10px 10px 20px;
+// `;
 
 const Border = styled.div`
   border-style: dashed;
@@ -159,7 +179,7 @@ const Border = styled.div`
   padding-top: 10px;
   border-width: 0px;
   scroll-snap-align: start;
-  margin-top: 50px;
+  /* margin-top: 2px; */
 `;
 
 const Details = styled.div`
@@ -178,4 +198,6 @@ const Details = styled.div`
 
 const Grid = styled.div`
   box-shadow: 2px 10px 60px slategray;
+  div {
+  }
 `;
