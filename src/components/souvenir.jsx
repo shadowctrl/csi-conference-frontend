@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Head, Header, Info } from "../components";
+
+
 const souvenir = () => {
   return (
     <div className="scroll-lock">
       <div className="snap-start">
-        <Header />
+        <Head />
       </div>
       <Main className="">
         <Border> </Border>
