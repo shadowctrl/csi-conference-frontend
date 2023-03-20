@@ -11,3 +11,4 @@ export { default as Popup } from "./Popup";
 export { default as Souvenir } from "./souvenir";
 export { default as Tw } from "./tw";
 export { default as Error } from "./error";
+export { default as Sponsors } from "./sponsors";
