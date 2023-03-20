@@ -5,7 +5,7 @@ import Aboutus from "./aboutus";
 import Header from "./Header";
 import ChiefPatronsA from "./ChiefPatronsA";
 import ChiefPatronsB from "./ChiefPatronsB";
-import { chiefPatobj, confChairsobj, confConvpbj } from "../Objects/details";
+import { chiefPatobj, confChairsobj, confConvobj, confCoordinationobj, financeCommitteeObj,  stageCommitteeObj, registrationCommitteeObj, hospitalityCommitteeObj, technicalProgrammingObj, transportCommitteeObj, inauguralAndValedictory} from "../Objects/details";
 import ConfChairs from "./ConfChairs";
 import Popup from "./Popup";
 // GrClose
@@ -240,7 +240,7 @@ const Hero = () => {
                 </CommiteeTitle>
 
                 <ConfGrid>
-                  {confConvpbj.map((member) => (
+                  {confConvobj.map((member) => (
                     <ConfChairs
                       name={member.name}
                       about={member.about}
@@ -250,43 +250,165 @@ const Hero = () => {
                   ))}
                 </ConfGrid>
 
-                {/* <Ul className="">
-                  <li>
-                    <span>Committee Head:</span> Mr. P. V. Subramanian, Past
-                    Chairperson, CSI Chennai Chapter{" "}
-                  </li>
-                  <li>
-                    {" "}
-                    <span>Secretary:</span>
-                    Dr. M. Senthil Kumar, Professor & Head, Cyber Security, SRM
-                    Valliammai Engineering College and past Secretary, CSI{" "}
-                    <h1 className="ml-[24px]">Kancheepuram Chapter </h1>
-                  </li>
-                  <li>
-                    <span>Treasurer:</span>
-                    Dr. A. Prema Kirubakaran, Professor, Vels Institute of
-                    Science, Technology and Advanced Studies, Chennai and past
-                    Secretary,{" "}
-                    <h1 className="ml-[24px]"> CSI Chennai Chapter</h1>
-                  </li>
-                  <li>
-                    <span>Joint Secretary:</span>Dr. BIJI C.L.., Associate
-                    Professor, vellore Institute of Technology, CSI Trivandrum
-                    Chapter{" "}
-                  </li>
-                  <li>
-                    {" "}
-                    <span>Joint Treasurer:</span>Ms. G. PRIYANKA, Assistant
-                    Professor, Mepco Schlenk Engineering College, CSI Sivakasi
-                    CHapter
-                  </li>
-                  <li>
-                    {" "}
-                    <span>Editorial Head:</span> Dr. R. ANANDAN, Professor and
-                    HoD, Vels Institute of Science, Technology and Advanced
-                    Studies
-                  </li>
-                </Ul> */}
+                
+              </div>
+
+              <div className=" ">
+                <CommiteeTitle className="">
+                Conference Coordination Committee{" "}
+                </CommiteeTitle>
+
+                <ConfGrid>
+                  {confCoordinationobj.map((member) => (
+                    <ConfChairs
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
+                      position={member.position}
+                    />
+                  ))}
+                </ConfGrid>
+
+                
+              </div>
+
+              <div className=" ">
+                <CommiteeTitle className="">
+                Finance Committee{" "}
+                </CommiteeTitle>
+
+                <ConfGrid>
+                  {financeCommitteeObj.map((member) => (
+                    <ConfChairs
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
+                      position={member.position}
+                    />
+                  ))}
+                </ConfGrid>
+
+                
+              </div>
+
+
+              <div className=" ">
+                <CommiteeTitle className="">
+                Stage Committee {" "}
+                </CommiteeTitle>
+
+                <ConfGrid>
+                  {stageCommitteeObj.map((member) => (
+                    <ConfChairs
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
+                      position={member.position}
+                    />
+                  ))}
+                </ConfGrid>
+
+                
+              </div>
+
+
+              <div className=" ">
+                <CommiteeTitle className="">
+                Registration Committee{" "}
+                </CommiteeTitle>
+
+                <ConfGrid>
+                  {registrationCommitteeObj.map((member) => (
+                    <ConfChairs
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
+                      position={member.position}
+                    />
+                  ))}
+                </ConfGrid>
+
+                
+              </div>
+
+
+              <div className=" ">
+                <CommiteeTitle className="">
+                Hospitality Committee{" "}
+                </CommiteeTitle>
+
+                <ConfGrid>
+                  {hospitalityCommitteeObj.map((member) => (
+                    <ConfChairs
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
+                      position={member.position}
+                    />
+                  ))}
+                </ConfGrid>
+
+                
+              </div>
+
+
+              <div className=" ">
+                <CommiteeTitle className="">
+                
+                  Technical Programming Committee{" "}
+                </CommiteeTitle>
+
+                <ConfGrid>
+                  {technicalProgrammingObj.map((member) => (
+                    <ConfChairs
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
+                      position={member.position}
+                    />
+                  ))}
+                </ConfGrid>
+
+                
+              </div>
+
+
+              <div className=" ">
+                <CommiteeTitle className="">
+                Transport Committee{" "}
+                </CommiteeTitle>
+
+                <ConfGrid>
+                  {transportCommitteeObj.map((member) => (
+                    <ConfChairs
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
+                      position={member.position}
+                    />
+                  ))}
+                </ConfGrid>
+
+                
+              </div>
+
+              <div className=" ">
+                <CommiteeTitle className="">
+                Compering for Inaugural and Valedictory{" "}
+                </CommiteeTitle>
+
+                <ConfGrid>
+                  {inauguralAndValedictory.map((member) => (
+                    <ConfChairs
+                      name={member.name}
+                      about={member.about}
+                      img={member.img}
+                      position={member.position}
+                    />
+                  ))}
+                </ConfGrid>
+
+                
               </div>
 
               <div className="d opacity-0">

@@ -120,115 +120,111 @@ const Head = () => {
           </button>
         </MenuButton>
 
-        <BurgerNav show={burgerStatus}>
-          <button on onClick={() => setBurgerStatus(false)}>
-            <RiCloseCircleFill size={iconSize} />
-          </button>
+        <BurgerNav show={burgerStatus} className=" bg-gray-gradient" onClick={() => setBurgerStatus(false)} >
 
+          <div style={{with: '100%', height: '100%'}}>
           <li>
-            <MenuWrap>
-              <AiFillHome size={25} />
+            <span>
+              <AiFillHome size={20} />
               <a href="#">
                 <button onClick={() => setButtonPopup(true)}>Home</button>
               </a>
-            </MenuWrap>
+            </span>
           </li>
           <li>
-            <MenuWrap>
-              <MdGroups size={30} />
+            <span>
+              <MdGroups size={20} />
               <a href="/#ac">
                 <button onClick={() => setBurgerStatus(false)}>
                   About Conference
                 </button>
               </a>
-            </MenuWrap>
+            </span>
           </li>
           <li>
-            <MenuWrap>
-              <BiBody size={25} />
+            <span>
+              <BiBody size={20} />
               <a href="/#ob">
                 <button onClick={() => setBurgerStatus(false)}>
                   Organising body
                 </button>
               </a>
-            </MenuWrap>
+            </span>
           </li>
           <li>
-            <MenuWrap>
-              <MdOutlineGroupAdd size={30} />
+            <span>
+              <MdOutlineGroupAdd size={20} />
               <a href="/#cm">
                 <button onClick={() => setBurgerStatus(false)}>
                   Committee members
                 </button>
               </a>
-            </MenuWrap>
+            </span>
           </li>
-          {/* <li>
-            <MenuWrap>
-            <RiLinksFill size={27} />
-              <a href="#il">
-                <button onClick={() => setBurgerStatus(false)}>Important links</button>
-                </a>
-            </MenuWrap>
-            
 
-          </li> */}
           <li>
-            <MenuWrap>
-              <GiPublicSpeaker size={25} />
+            <span>
+              <GiPublicSpeaker size={20} />
               <a href="/chiefGuest">
                 <button onClick={() => setBurgerStatus(false)}>
                   Chief Guest
                 </button>
               </a>
-            </MenuWrap>
+            </span>
           </li>
           <li>
-            <MenuWrap>
-              <CgNotes size={25} />
-              <a href="http://localhost:3333/#r">
+            <span>
+              <CgNotes size={20} />
+              <a href="/#r">
                 <button onClick={() => setBurgerStatus(false)}>
                   Registrations
                 </button>
               </a>
-            </MenuWrap>
+            </span>
           </li>
           <li>
-            <MenuWrap>
-              <FcAbout size={25} />
+            <span>
+              <FcAbout size={20} />
               <a href="/#au">
                 <button onClick={() => setBurgerStatus(false)}>About Us</button>
               </a>
-            </MenuWrap>
+            </span>
+
           </li>
 
+          <div style={{ marginLeft: '43vw' }}>
+            <button on onClick={() => setBurgerStatus(false)}>
+              <RiCloseCircleFill
 
-
+                size={47} />
+            </button>
+          </div>
+          </div>
         </BurgerNav>
       </MiddleNav>
       <BottomNav show={more}>
-        <More 
+        <More
           show={more}
-         
+
         >
-          <li  className="bg-gray-gradient">
+          <li className="bg-gray-gradient">
             <span>
-            <FcAbout size={iconSize} />
-            <a href="/#au">About Us</a>
+              <FcAbout size={iconSize} />
+              <a href="/#au">About Us</a>
             </span>
           </li >
 
-          <li  className="bg-gray-gradient">
+          <li className="bg-gray-gradient">
             <span>
-            <BiBody size={iconSize} />
-            <a href="/#ob">Organising body</a>
+              <BiBody size={iconSize} />
+              <a href="/#ob">Organising body</a>
             </span>
           </li>
 
-          <li  className="bg-gray-gradient">
+          <li className="bg-gray-gradient">
             <span>
-            <MdOutlineGroupAdd size={iconSize} />
-            <a href="/#cm">Committee members</a>
+              <MdOutlineGroupAdd size={iconSize} />
+              <a href="/#cm">Committee members</a>
             </span>
           </li>
         </More>
@@ -252,7 +248,9 @@ const HeaderC = styled.div`
     background-color: rgb(51, 65, 85);
 
     @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {}
-    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {}
+    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {
+      /* width: 160vw; */
+    }
 
 `;
 
@@ -279,8 +277,23 @@ const TopNav = styled.div`
       height: 7.2vw;
     }
 
-    @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {}
-    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {}
+    @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
+      height: 14vh;
+      gap: 4vw;
+      
+      img{
+        width: 22vw;
+        height: 22vw;
+      }
+    }
+    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {
+      height: 22vh;
+      gap: 2vw;
+      img{
+        width: 8.7vw;
+        height: 8.7vw;
+      }
+    }
 
 `;
 
@@ -297,9 +310,24 @@ const Heading = styled.div`
       font-size: 1.3vw;
       font-weight: 600;
     }
- @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {}
+ @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
+
+    h1{
+      font-size: 4vw;
+    }
+    span{
+      font-size: 3.3vw;
+    }
+ }
    
-    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {}
+    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {
+      h1{
+      font-size: 2.3vw;
+    }
+    span{
+      font-size: 1.7vw;
+    }
+    }
 
 `;
 
@@ -319,6 +347,7 @@ const MiddleNav = styled.div`
       display: flex;
       /* flex-direction: row-reverse; */
       padding-right: 4vw;
+      height: 5vh;
     }
     @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {}
 
@@ -366,7 +395,9 @@ const Ul = styled.div`
       width: 0vw;
       display: none ;
     }
-    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {}
+    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {
+      display: none;
+    }
 
 
     /* @media (min-width: 768px){
@@ -380,6 +411,7 @@ const MenuButton = styled.div`
     height: 100%;
     display: flex;
     justify-content: center;
+    margin-left: 90vw;
     display: ${(props) => (props.show ? "none" : "flex")};
     /* background-color: pink; */
     align-items: center;
@@ -392,54 +424,96 @@ const MenuButton = styled.div`
     /* display: none; */
     /* width: 0vw; */
     @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
-      /* right: 0; */
+      display: flex;
     }
-    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {}
+    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {
+      display: flex;
+    }
 
 `;
 
 const BurgerNav = styled.div`
       
-      height: 50vh;
-      width: 70vh;
-      position: absolute;
+      z-index: 1;
+      position: fixed;
       right: 0;
+      top: 0;
       display: flex;
       flex-direction: column;
-      /* background-color: yellow; */
-      border-radius: 20px;
-      width: 25vw;
+      justify-content: center;
+      /* align-items: center; */
+      /* border-radius: 20px; */
+      
       transform: ${(props) => (props.show ? "translateX(0)" : "translateX(100%)")};
       transition: transform 0.5s;
-      /* display: ${(props) => (props.show ? "" : "none")}; */
-      /* justify-content: center; */
-      /* align-items: center; */
-      /* padding-right: 70px; */
-
+    
       li{
-        display: flex-wrap;
-        flex-direction: row;
-        flex-wrap: nowrap;
-       
-        /* gap: 7px; */
+        
+        
+        list-style: none;
+        color: #f5f5f5;
+        /* border-bottom: 1px solid rgb(245, 245, 245,0.6); */
+        span{
+          display: flex;
+          align-items: center;
+          /* justify-content: center; */
 
         a{
-          font-size: 5px;
+          
+          font-weight: 600;
+        }
         }
       }
 
-      @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
-
+      button{
+        color: #f5f5f5;
+        /* margin-left: 2vw; */
       }
-      @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {}
+
+      @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
+        
+        width: 100vw;
+        height: 100vh;
+        gap: 6.3vh;
+        padding-bottom: 9vh;
+        li{
+          margin-left: 19vw;
+          span{
+            gap: 2vw;
+            a{
+              font-size: 5vw;
+            }
+          }
+
+        
+        }
+        button{
+          /* margin-left: 27vw ; */
+        }
+      }
+      @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {
+        width: 100vw;
+        /* height: 100vh; */
+        overflow-y: scroll;
+        gap:6vh;
+        padding: 10vh 0;
+        li{
+          
+          margin-left: 36vw;
+          span{
+            gap: 2vw;
+
+            a{
+            font-size: 2vw;
+            /* margin-bottom: 3vh; */
+          }
+          }
+        }
+      }
 
 `;
 
-const MenuWrap = styled.div`
-    li{
-      display: felx;
-    }
-`;
+
 
 const DownAr = styled.div`
   display: ${(props) => (props.show ? "none" : "")};
@@ -456,30 +530,31 @@ const BottomNav = styled.div`
     top: 28vh;
     z-index: 1;
     /* background-color: pink; */
-    transform : ${(props) => (props.show ? "translateY(0)" : "translateY(-300%)")};
+    animation : ${(props) => (props.show ? "TranslateY 1s" : "")};
+    display : ${(props) => (props.show ? "" : "none")};
     transition: transform 0.5s;
+    @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
+      display: none;
+
+    }
+    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {
+        display: none;
+ 
+    }
 `;
 const More = styled.div`
     height: 20vh;
     width: 16vw;
-    /* z-index: 1; */
-    /* transform : ${(props) => (props.show ? "translateY(0)" : "translateY(-100%)")}; */
-    /* transition: 0.5s; */
+    
     /* background-color: yellow; */
     margin-left: 75.5vw;
     display: flex;
     flex-direction: column;
     gap: 0.07vw;
-    /* box-shadow: 0px 3px 16px 7px; */
-    /* opacity: 0.2; */
-    /* padding: 0.5vh 1.9vw; */
+
     border-radius: 8%;
     
-    /* align-items: center; */
-    
-
-    /* display: ${(props) => (props.show ? "translateY(0)" : "translateX(100%)")}; */
-
+   
     li{
         display: flex;
         margin: 0 0vw;
