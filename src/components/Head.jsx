@@ -13,11 +13,11 @@ import Popup from './Popup';
 //                   ICONS
 
 import { AiFillHome, AiFillCaretDown, AiFillCaretUp } from 'react-icons/ai';
-import { MdGroups, MdOutlineGroupAdd } from 'react-icons/md';
+import { MdGroups, MdOutlineGroupAdd, MdEmojiEvents } from 'react-icons/md';
 import { BiBody } from 'react-icons/bi';
 import { GiPublicSpeaker, GiHamburgerMenu } from 'react-icons/gi';
 import { CgNotes } from 'react-icons/cg';
-import { FcAbout } from 'react-icons/fc';
+import { FcAbout, FcMoneyTransfer } from 'react-icons/fc';
 import { RiCloseCircleFill } from 'react-icons/ri';
 
 
@@ -122,7 +122,7 @@ const Head = () => {
 
         <BurgerNav show={burgerStatus} className=" bg-gray-gradient" onClick={() => setBurgerStatus(false)} >
 
-          <div style={{with: '100%', height: '100%'}}>
+          
           <li>
             <span>
               <AiFillHome size={20} />
@@ -191,15 +191,26 @@ const Head = () => {
             </span>
 
           </li>
-
+          <li className="bg-gray-gradient">
+            <span>
+            <MdEmojiEvents size={iconSize}/>
+            <a href="#">Souvenir</a>
+            </span>
+          </li>
+          <li className="bg-gray-gradient">
+            <span>
+            <FcMoneyTransfer size={iconSize}/>
+            <a href="#">Sponsers</a>
+            </span>
+          </li>
           <div style={{ marginLeft: '43vw' }}>
-            <button on onClick={() => setBurgerStatus(false)}>
+            {/* <button on onClick={() => setBurgerStatus(false)}>
               <RiCloseCircleFill
 
                 size={47} />
-            </button>
+            </button> */}
           </div>
-          </div>
+          
         </BurgerNav>
       </MiddleNav>
       <BottomNav show={more}>
@@ -207,12 +218,7 @@ const Head = () => {
           show={more}
 
         >
-          <li className="bg-gray-gradient">
-            <span>
-              <FcAbout size={iconSize} />
-              <a href="/#au">About Us</a>
-            </span>
-          </li >
+      
 
           <li className="bg-gray-gradient">
             <span>
@@ -225,6 +231,24 @@ const Head = () => {
             <span>
               <MdOutlineGroupAdd size={iconSize} />
               <a href="/#cm">Committee members</a>
+            </span>
+          </li>
+          <li className="bg-gray-gradient">
+            <span>
+              <FcAbout size={iconSize} />
+              <a href="/#au">About Us</a>
+            </span>
+          </li >
+          <li className="bg-gray-gradient">
+            <span>
+            <MdEmojiEvents size={iconSize}/>
+            <a href="#">Souvenir</a>
+            </span>
+          </li>
+          <li className="bg-gray-gradient">
+            <span>
+            <FcMoneyTransfer size={iconSize}/>
+            <a href="#">Sponsers</a>
             </span>
           </li>
         </More>
@@ -440,6 +464,7 @@ const BurgerNav = styled.div`
       top: 0;
       display: flex;
       flex-direction: column;
+
       justify-content: center;
       /* align-items: center; */
       /* border-radius: 20px; */
@@ -475,7 +500,7 @@ const BurgerNav = styled.div`
         width: 100vw;
         height: 100vh;
         gap: 6.3vh;
-        padding-bottom: 9vh;
+        /* padding-bottom: 7vh; */
         li{
           margin-left: 19vw;
           span{
@@ -496,7 +521,7 @@ const BurgerNav = styled.div`
         /* height: 100vh; */
         overflow-y: scroll;
         gap:6vh;
-        padding: 10vh 0;
+        padding: 1vh 0;
         li{
           
           margin-left: 36vw;

@@ -9,7 +9,7 @@ function App() {
         <Route path="/" element={[<Head />, <Hero />, <Info />]} />
         <Route
           path="chiefGuest"
-          element={[<Header />, <ChiefGuest />, <Info />]}
+          element={[<Head />, <ChiefGuest />, <Info />]}
         />
         <Route path="souvenir" element={[<Souvenir />]} />
       </Routes>
