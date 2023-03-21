@@ -33,6 +33,11 @@ const Head = () => {
   const Morefun = () => {
     more ? setMore(false) : setMore(true)
   }
+
+  const MoreDisable = () => {
+
+    setMore(false);
+  }
   return (
 
     <HeaderC>
@@ -494,13 +499,15 @@ const BurgerNav = styled.div`
         color: #f5f5f5;
         /* margin-left: 2vw; */
       }
+      display: none;
 
       @media all and (max-width: 768px) and (max-height: 1024px) and (orientation:portrait) {
         
+        display: flex;
         width: 100vw;
         height: 100vh;
         gap: 6.3vh;
-        /* padding-bottom: 7vh; */
+        padding-top: 4vh;
         li{
           margin-left: 19vw;
           span{
@@ -517,8 +524,9 @@ const BurgerNav = styled.div`
         }
       }
       @media all and (max-width: 1024px) and (max-height: 768px) and (orientation:landscape) {
+        display: flex;
         width: 100vw;
-        /* height: 100vh; */
+        height: 100vh;
         overflow-y: scroll;
         gap:6vh;
         padding: 1vh 0;

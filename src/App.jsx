@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Header, Head, Hero, Info, ChiefGuest, Souvenir } from "./components/index";
 
 function App() {
+  // const [more, setMore] = useState(false);
   return (
     <BrowserRouter>
       <Routes>
