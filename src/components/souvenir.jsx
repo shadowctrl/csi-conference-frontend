@@ -86,9 +86,6 @@ export default Souvenir;
 const Main = styled.div`
   margin-right: 10px;
   margin-left: 10px;
-  @media all and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
-    padding-bottom: 10px;
-  }
 `;
 const H1 = styled.div`
   font-family: "mars";
@@ -131,35 +128,6 @@ const H1 = styled.div`
     text-shadow: 0px 0px 0px;
     padding: 25px;
     animation: fadey 2s linear forwards;
-    @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
-      font-size: large;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: justify;
-    }
-    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
-      font-size: medium;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: justify;
-    }
-  }
-
-  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
-    font-size: medium;
-    height: 87vh;
-    gap: 40px;
-    padding: 0px 20px;
-  }
-  @media all and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
-    font-size: large;
-    height: 80vh;
-    gap: 25px;
-    padding: 0px 20px;
   }
 `;
 
@@ -200,6 +168,7 @@ const Details = styled.div`
   box-shadow: 2px 2px 20px 2px;
   height: 97vh;
   padding: 20px;
+  margin-bottom: 2vh;
   text-shadow: 10px 10px 20px;
   display: flex;
   justify-content: center;
@@ -208,41 +177,11 @@ const Details = styled.div`
   /* padding-top: 40px; */
 
   span {
-    @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
-      font-size: 22px;
-      justify-content: start;
-    }
-    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
-      font-size: 22px;
-      justify-content: start;
-      padding-top: 20px;
-    }
-
     display: flex;
     justify-content: center;
     align-items: center;
   }
   div {
-    @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
-      /* height: 87vh; */
-      font-size: 17px;
-    }
-    @media all and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
-      font-size: 17px;
-    }
-  }
-
-  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
-    height: 87vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  @media all and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 `;
 
@@ -250,11 +189,4 @@ const Grid = styled.div`
   box-shadow: 2px 10px 60px slategray;
   row-gap: 60px;
   margin-top: 40px;
-  @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
-    text-align: center;
-  }
-  @media all and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
-    row-gap: 40px;
-    margin-top: 10px;
-  }
 `;
