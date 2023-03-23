@@ -458,8 +458,8 @@ const BurgerNav = styled.div`
   @media all and (max-width: 768px) and (max-height: 1024px) and (orientation: portrait) {
     display: flex;
     width: 100vw;
-    height: 100vh;
-    gap: 6.3vh;
+    height: 90vh;
+    gap: 6vh;
     padding-top: 4vh;
     li {
       margin-left: 19vw;
@@ -477,7 +477,7 @@ const BurgerNav = styled.div`
   @media all and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     overflow-y: scroll;
     gap: 6vh;
     padding: 1vh 0;
